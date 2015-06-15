@@ -40,8 +40,8 @@
 
   <div class="container">
     <div class="featurette">
-      <img class="featurette-image img-circle img-responsive pull-right" src="images/1.jpg" alt="First image">
-      <img class="featurette-image img-circle img-responsive pull-right" src="images/2.jpg" alt="Second image" style="display: none;">
+      <img id="version1" class="featurette-image img-circle img-responsive pull-right" src="images/1.jpg" alt="First image" style="display: none;">
+      <img id="version2" class="featurette-image img-circle img-responsive pull-right" src="images/2.jpg" alt="Second image" style="display: none;">
 
       <h2 class="featurette-heading">Automating Visual Software Testing With
         <span class="text-muted">Applitools Eyes</span>
@@ -82,5 +82,36 @@
 
   <!-- Bootstrap Core JavaScript -->
   <script src="js/bootstrap.min.js"></script>
+
+  <script type='text/javascript'>
+    function parseQueryString() {
+      var search = location.search,
+        obj = {};
+      if (search === '' || search === '?') {
+        return obj;
+      }
+
+      if (search[0]) {
+        search = search.slice(1);
+      }
+
+      tokens = search.split('&');
+      for (var i = 0; i < tokens.length; ++i) {
+        var pair = tokens[i].split('=');
+        obj[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
+      }
+
+      return obj;
+    }
+
+    (function() {
+      var query = parseQueryString();
+      if (query.version === '2') {
+        $('#version2').show();
+      } else {
+        $('#version1').show();
+      }
+    }());
+</script>
 </body>
 </html>
