@@ -40,11 +40,11 @@
 }
 
 .featurette-divider {
-  margin: 80px 0;
+  margin: 20px 0;
 }
 
 .featurette {
-  margin: 80px 0;
+  margin: 40px 0;
   overflow: hidden;
 }
 
@@ -61,7 +61,7 @@
 }
 
 footer {
-  margin: 50px 0;
+  margin: 30px 0;
 }
 
 @media(max-width:1200px) {
