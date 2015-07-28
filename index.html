@@ -67,6 +67,9 @@
 
     <hr class='featurette-divider'>
 
+    <iframe id='frame' src='index.html' style='display: none;'>
+    </iframe>
+
     <!-- Footer -->
     <footer>
       <div class='row'>
@@ -115,6 +118,10 @@
       $floating.show();
     }
 
+    function showFrame() {
+      $('#frame').show();
+    }
+
     (function() {
       var query = parseQueryString();
       switch (query.version) {
@@ -132,6 +139,10 @@
 
       if (query.floating) {
         showFloating();
+      }
+
+      if (query.frame) {
+        showFrame();
       }
     }());
   </script>
