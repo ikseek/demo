@@ -5,8 +5,8 @@
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <meta name='description' content='>
-  <meta name='author' content='>
+  <meta name='description' content=''>
+  <meta name='author' content=''>
 
   <title>Applitools – Visual Test Automation</title>
   <link rel='icon' href='images/Favicone1.png' sizes='16x16' type='image/png'>
@@ -31,7 +31,7 @@
 
 <body>
   <!-- Navigation -->
-  <nav class='navbar navbar-inverse navbar-fixed-top' role='navigation'>
+  <nav class='navbar navbar-inverse' role='navigation'>
     <div class='container'>
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class='navbar-header'>
@@ -66,6 +66,9 @@
     <h3 id='floating' style='display: none;'><span class='text-muted'></span>: "Applitools Eyes changed my life!"</h3>
 
     <hr class='featurette-divider'>
+
+    <iframe id='frame' src='index.html' style='display: none;'>
+    </iframe>
 
     <!-- Footer -->
     <footer>
@@ -115,6 +118,10 @@
       $floating.show();
     }
 
+    function showFrame() {
+      $('#frame').show();
+    }
+
     (function() {
       var query = parseQueryString();
       switch (query.version) {
@@ -132,6 +139,10 @@
 
       if (query.floating) {
         showFloating();
+      }
+
+      if (query.frame) {
+        showFrame();
       }
     }());
   </script>

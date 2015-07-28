@@ -4,10 +4,6 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-body {
-  margin-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-}
-
 .navbar-inverse {
   background-color: black;
 }
@@ -62,6 +58,10 @@ body {
 
 footer {
   margin: 30px 0;
+}
+
+iframe {
+  width: 100%;
 }
 
 @media(max-width:1200px) {
