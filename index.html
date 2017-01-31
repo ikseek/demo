@@ -1,150 +1,71 @@
-<!DOCTYPE html>
-<html lang='en'>
-
+<!doctype html>
+<html>
 <head>
-  <meta charset='utf-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <meta name='description' content=''>
-  <meta name='author' content=''>
+    <title>Applitools - Demo App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Applitools – Visual Test Automation</title>
-  <link rel='icon' href='images/Favicone1.png' sizes='16x16' type='image/png'>
-
-  <!-- Bootstrap Core CSS -->
-  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
-
-  <!-- Custom CSS -->
-  <link href='css/one-page-wonder.css' rel='stylesheet'>
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-      <script src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js'></script>
-      <script src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js'></script>
-  <![endif]-->
-
-  <script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
-  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/Faker/0.7.2/MinFaker.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <!-- Navigation -->
-  <nav class='navbar navbar-inverse' role='navigation'>
-    <div class='container'>
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class='navbar-header'>
-        <a class='navbar-brand' href='https://applitools.com'>
-          <img src='images/applitools_logoHeader.png' alt='Applitools'>
-        </a>
-      </div>
-    </div>
-  </nav>
 
-  <div class='container'>
-    <div class='featurette'>
-      <img id='version1' class='featurette-image img-circle img-responsive pull-right' src='images/1.jpg' alt='First image' style='display: none;'>
-      <img id='version2' class='featurette-image img-circle img-responsive pull-right' src='images/2.jpg' alt='Second image' style='display: none;'>
-
-      <h2 class='featurette-heading'>Automating Visual Software Testing With
-        <span class='text-muted'>Applitools Eyes</span>
-      </h2>
-
-      <p class='lead'>
-      </p>
-
-      <ul>
-        <li>Verify that the GUI appears correctly across all devices and browsers</li>
-        <li>Take pressure off manual QA: increase coverage, test faster and more accurately</li>
-        <li>Reduce maintenance efforts: automatically propagate changes across execution environments</li>
-        <li>Easily scale up with unlimited concurrent test runs in the cloud</li>
-        <li id='p'>Release faster, with confidence and flawless UI</li>
-      </ul>
-    </div>
-
-    <h3 id='floating' style='display: none;'><span class='text-muted'></span>: "Applitools Eyes changed my life!"</h3>
-
-    <hr class='featurette-divider'>
-
-    <iframe id='frame' src='index.html' style='display: none;'>
-    </iframe>
-
-    <!-- Footer -->
-    <footer>
-      <div class='row'>
-        <div class='col-lg-12'>
-          <p>&copy; 2015 Applitools. All rights reserved.</p>
+<div class="page">
+    <div class="section">
+        <div class="fancy title primary">
+            <span style="color:#ff0000;">H</span><span style="color:#ff4000;">e</span><span
+                style="color:#ff7f00;">l</span><span style="color:#ffbf00;">l</span><span
+                style="color:#ffff00;">o</span><span style="color:#00ff00;"> </span><span
+                style="color:#00ff80;">w</span><span style="color:#00ffff;">o</span><span
+                style="color:#0080ff;">r</span><span style="color:#0000ff;">l</span><span
+                style="color:#4600ff;">d</span><span style="color:#8b00ff;">!</span>
         </div>
-      </div>
-    </footer>
-  </div>
+        <div class="fancy title alternate">
+            <span style="color:#8b00ff;">H</span><span style="color:#4600ff;">e</span><span
+                style="color:#0000ff;">l</span><span style="color:#0080ff;">l</span><span
+                style="color:#00ffff;">o</span><span style="color:#00ff80;"> </span><span
+                style="color:#00ff00;">w</span><span style="color:#ffff00;">o</span><span
+                style="color:#ffbf00;">r</span><span style="color:#ff7f00;">l</span><span
+                style="color:#ff4000;">d</span><span style="color:#ff0000;">!</span>
+        </div>
+    </div>
 
-  <script type='text/javascript'>
-    function parseQueryString() {
-      var search = location.search,
-        obj = {};
-      if (search === '' || search === '?') {
-        return obj;
-      }
+    <div class="section">
+        <p>Welcome to your first Applitools Eyes test</p>
 
-      if (search[0]) {
-        search = search.slice(1);
-      }
+        <p>
+            <span class="primary">123456</span>
+            <span class="alternate">9876543210</span>
+            is a random number
+        </p>
+    </div>
 
-      tokens = search.split('&');
-      for (var i = 0; i < tokens.length; ++i) {
-        var pair = tokens[i].split('=');
-        obj[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
-      }
+    <div class="section button-section">
+        <button>Click me!</button>
+    </div>
 
-      return obj;
+    <div class="section hidden-section">
+        <p>You successfully clicked the button!</p>
+
+        <img class="primary" src="images/image_1.jpg"/>
+        <img class="alternate" src="images/image_2.jpg"/>
+    </div>
+</div>
+
+<script type="text/javascript">
+  var hiddenEl = document.querySelector(".hidden-section");
+  if (~window.location.href.indexOf("alternate")) {
+    document.querySelector(".page").classList.add("alternate");
+  }
+
+  document.querySelector("button").addEventListener("click", function (e) {
+    if (hiddenEl.classList.contains("hidden-section")) {
+      hiddenEl.classList.remove("hidden-section");
     }
-
-    function showVersion1() {
-      $('#version1').show();
+    else {
+      hiddenEl.classList.add("hidden-section");
     }
-
-    function showVersion2() {
-      $('#version2').show();
-
-        var $p = $('#p');
-        $p.text($p.text() + '!');
-    }
-
-    function showFloating() {
-      var $floating = $('#floating');
-      $('span', $floating).text(Faker.Name.findName() + ', ' + Faker.Company.companyName() + ' ' + Faker.Company.companySuffix());
-      $floating.show();
-    }
-
-    function showFrame() {
-      $('#frame').show();
-    }
-
-    (function() {
-      var query = parseQueryString();
-      switch (query.version) {
-        case '1':
-          showVersion1();
-          break;
-
-        case '2':
-          showVersion2();
-          break;
-
-        default:
-          showVersion1();
-      }
-
-      if (query.floating) {
-        showFloating();
-      }
-
-      if (query.frame) {
-        showFrame();
-      }
-    }());
-  </script>
+  });
+</script>
 </body>
 </html>
