@@ -1,0 +1,68 @@
+html, body {
+    color: #333;
+    font-size: 16px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    padding: 8px 16px;
+    background: #98aac4;
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #a5b8d4;
+}
+
+.page {
+    max-width: 625px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page.alternate .section .primary {
+    display: none;
+}
+
+.page.alternate .section .alternate {
+    display: initial;
+}
+
+.page.alternate .button-section {
+    text-align: right;
+}
+
+.fancy {
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.title {
+    margin-bottom: 40px;
+    font-size: 82px;
+    text-transform: uppercase;
+}
+
+.section {
+    padding: 20px;
+    background: #fff;
+}
+
+.section .alternate {
+    display: none;
+}
+
+.hidden-section {
+    display: none;
+}
