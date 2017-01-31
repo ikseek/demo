@@ -37,10 +37,10 @@ button:hover {
 }
 
 .page.alternate .section .alternate {
-    display: block;
-}
-.page.alternate .section img.alternate {
     display: inline;
+}
+.page.alternate .section .title.alternate {
+    display: block;
 }
 
 .page.alternate .button-section {
