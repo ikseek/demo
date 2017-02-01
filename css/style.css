@@ -27,6 +27,7 @@ button:hover {
 }
 
 .page {
+    min-width: 301px;
     max-width: 625px;
     margin: 0 auto;
     text-align: center;
@@ -47,12 +48,15 @@ button:hover {
     text-align: right;
 }
 
+.image-section img {
+    margin-top: 20px;
+}
+
 .fancy {
     font-family: 'Gloria Hallelujah', cursive;
 }
 
 .title {
-    height: 82px;
     margin-bottom: 40px;
     font-size: 82px;
     text-transform: uppercase;
