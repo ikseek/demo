@@ -31,7 +31,9 @@
     </div>
 
     <div class="section">
-        <p>Welcome to your first Applitools Eyes test</p>
+        <p>Welcome to your first Applitools Eyes test!!!</p>
+
+        <p>Add <a href="?diff">?diff</a> to the end of the url to simulate a difference</p>
 
         <p>
             <span class="primary">123456</span>
@@ -44,7 +46,7 @@
         <button>Click me!</button>
     </div>
 
-    <div class="section hidden-section">
+    <div class="section hidden-section image-section">
         <p>You successfully clicked the button!</p>
 
         <img class="primary" src="images/image_1.jpg"/>
@@ -54,7 +56,7 @@
 
 <script type="text/javascript">
   var hiddenEl = document.querySelector(".hidden-section");
-  if (~window.location.href.indexOf("alternate")) {
+  if (~window.location.href.indexOf("diff")) {
     document.querySelector(".page").classList.add("alternate");
   }
 
