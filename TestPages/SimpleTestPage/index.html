@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>Cross SDK test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<style>
+		img { border: 5px solid blue; }
+		img:nth-child(2n) { border-color: green; }
+	</style>
+</head>
+<body>
+    <h1>Applitools</h1>
+    <div id="overflowing-div" style="width: 950px;">
+		<script>
+			for (var i=0;i<51;++i){
+				window.document.writeln("<img src='minions-300x188.jpg'>");
+			}
+		</script>
+    </div>
+    <br>
+</body>
+</html>
