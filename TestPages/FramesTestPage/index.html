@@ -1,8 +1,9 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head lang="en">
-    <title>Cross SDK test</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Cross SDK test</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<style>
 		#centered {
 			margin: auto;
@@ -30,90 +31,128 @@
 			line-height: 18px;
 		}
 
-		#modal-content {
+		.modal-content {
 			margin: 2em auto;
-			padding: 2em;
 			width: 400px;
-			min-height: 120vh;
-			background: linear-gradient(to bottom, #7aef22 0%,#3bd8d8 33%, #4152ca 66%, #e967f9 100%);
 			box-shadow: 0px 5px 20px rgba(0,0,0,1);
-		    font-size: larger;
-    		text-align: justify;
-    		line-height: 1.25em;
+		}
+
+		#modal-content {
+			background: linear-gradient(to bottom, #7aef22 0%,#3bd8d8 33%, #4152ca 66%, #e967f9 100%);
+			padding: 2em;
+		  font-size: larger;
+    	text-align: justify;
+    	line-height: 1.25em;
+			min-height: 120vh;
+		}
+
+		.modal {
+			overflow: auto;
+			position: fixed; 
+			top: 0; 
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba(0,0,0,0.5);
 		}
 	</style>
 </head>
+
 <body>
-    <h1>Applitools</h1>
-    <div id="overflowing-div" style="width: 300px; height: 180px; overflow: hidden; border: 2px solid black;">
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
-        CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-        DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
-        EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
-        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-        GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
-        HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
-        IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
-        JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
-        KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
-        LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
-        OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
-    </div>
-    <br>
-    <div id="overflowing-div-image" style="width: 300px; height: 180px; overflow: scroll; border: 2px solid red;">
-        <img class="ignore" src="./minions-800x500.jpg">
-    </div>
-    <br>
-    <br>
-    <iframe name="frame1" src="./frame2.html" style="position: relative; left: 50px;" width="500" height="400"></iframe>
+	<h1>Applitools</h1>
+	<div id="overflowing-div" style="width: 300px; height: 180px; overflow: hidden; border: 2px solid black;">
+		AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+		BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+		CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+		DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+		EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+		FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+		GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+		HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+		IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+		JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
+		KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
+		LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+		NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+		OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+	</div>
+	<br>
+	<div id="overflowing-div-image" style="width: 300px; height: 180px; overflow: scroll; border: 2px solid red;">
+		<img class="ignore" src="./minions-800x500.jpg">
+	</div>
+	<br>
+	<br>
+	<iframe name="frame1" src="./frame2.html" style="position: relative; left: 50px;" width="500" height="400"></iframe>
 	<br>
 	<br>
 	<div class="ignore" id="centered"></div>
 	<br>
 	<br>
-	<div class="ignore"  id="stretched"></div>
+	<div class="ignore" id="stretched"></div>
 	<br>
 	<input type="text" />
 	<br>
-	<div id="modal" style="display: none; overflow: auto; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5);">
-		<div id="modal-content">
+	<div id="modal1" class="modal" style="display: none;">
+		<div id="modal-content" class="modal-content">
 			<h1>Content Header</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum, sapien id efficitur commodo, dui 
-				urna mollis augue, eu facilisis tortor leo eget massa. Suspendisse eget est vel mi iaculis ultricies. Vestibulum 
-				augue risus, egestas venenatis lectus ut, interdum laoreet risus. Cras erat augue, sodales at mattis ut, dignissim 
-				ut lorem. Sed sapien ex, varius quis aliquam a, aliquet at nisl. Praesent finibus augue mattis, semper metus vel, 
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum, sapien id efficitur commodo,
+				dui
+				urna mollis augue, eu facilisis tortor leo eget massa. Suspendisse eget est vel mi iaculis ultricies. Vestibulum
+				augue risus, egestas venenatis lectus ut, interdum laoreet risus. Cras erat augue, sodales at mattis ut, dignissim
+				ut lorem. Sed sapien ex, varius quis aliquam a, aliquet at nisl. Praesent finibus augue mattis, semper metus vel,
 				finibus leo. Integer in consectetur dolor.</p>
-			<p>Aliquam dignissim, nisi sagittis vulputate laoreet, nunc ipsum consectetur mauris, in pharetra metus tellus id nulla.
-				Nulla congue iaculis nunc vitae accumsan. Etiam nec turpis nunc. In tortor lacus, congue ut commodo sit amet, lobortis
-				quis purus. Fusce eget condimentum ligula. Fusce sit amet enim pellentesque, vestibulum turpis sed, sollicitudin nisl.
-				Quisque purus odio, euismod a sapien ut, pretium euismod elit. Nullam dapibus varius molestie. Morbi at rhoncus velit.
+			<p>Aliquam dignissim, nisi sagittis vulputate laoreet, nunc ipsum consectetur mauris, in pharetra metus tellus id
+				nulla.
+				Nulla congue iaculis nunc vitae accumsan. Etiam nec turpis nunc. In tortor lacus, congue ut commodo sit amet,
+				lobortis
+				quis purus. Fusce eget condimentum ligula. Fusce sit amet enim pellentesque, vestibulum turpis sed, sollicitudin
+				nisl.
+				Quisque purus odio, euismod a sapien ut, pretium euismod elit. Nullam dapibus varius molestie. Morbi at rhoncus
+				velit.
 				Ut blandit nulla vitae risus consequat semper. Maecenas ut lacus consectetur, commodo leo nec, pellentesque ex. Sed
 				euismod eros facilisis risus tincidunt, ac tristique enim rutrum. Aenean tincidunt risus nulla, eget varius nisi
 				tempus tristique.</p>
-			<p>In sit amet ullamcorper felis, vel mollis mauris. Mauris fermentum nulla enim, a semper leo vulputate sit amet. Orci
-				varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas consequat tortor sit amet
+			<p>In sit amet ullamcorper felis, vel mollis mauris. Mauris fermentum nulla enim, a semper leo vulputate sit amet.
+				Orci
+				varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas consequat tortor sit
+				amet
 				egestas tempor. Fusce non consectetur erat. Fusce eget ligula in ligula sodales luctus. Nulla non nulla hendrerit,
 				cursus lorem a, maximus ipsum.</p>
 		</div>
 	</div>
+	<div id="modal2" class="modal" style="display: none;">
+		<iframe src="./longframe.html" class="modal-content" style="height:80vh; border: none; display: block;"></iframe>
+	</div>
 	<script>
-		var element = document.querySelector("#centered");
-		var modal = document.querySelector("#modal");
+		var element1 = document.querySelector("#centered");
+		var element2 = document.querySelector("#stretched");
+		var modal1 = document.querySelector("#modal1");
+		var modal2 = document.querySelector("#modal2");
 
-		function toggleModal(){
-			if (modal.style.display === "none"){
-				modal.style.display = "block";
+		function toggleModal1() {
+			if (modal1.style.display === "none") {
+				modal1.style.display = "block";
 			} else {
-				modal.style.display = "none";
+				modal1.style.display = "none";
 			}
 		}
 
-		element.addEventListener("click", toggleModal);
-		modal.addEventListener("click", toggleModal);
+		function toggleModal2() {
+			if (modal2.style.display === "none") {
+				modal2.style.display = "block";
+			} else {
+				modal2.style.display = "none";
+			}
+		}
+
+		element1.addEventListener("click", toggleModal1);
+		modal1.addEventListener("click", toggleModal1);
+
+		element2.addEventListener("click", toggleModal2);
+		modal2.addEventListener("click", toggleModal2);
 
 	</script>
 </body>
+
 </html>
