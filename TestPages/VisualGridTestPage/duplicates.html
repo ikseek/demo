@@ -12,7 +12,7 @@
 <body>
   <iframe id="localFrame1">
   </iframe>
-  <iframe id="localFrame2">
+  <iframe id="localFrame2" src="about:blank">
   </iframe>
   <p>external iframe, first instance:</p>
   <iframe src="frame.html"></iframe>
@@ -20,12 +20,12 @@
   <iframe src="frame.html"></iframe>
   <script>
     var frame1Child = document.createElement("p");
-    frame1Child.textContent="first frame";
+    frame1Child.textContent = "first frame";
     var localFrame1 = document.querySelector("#localFrame1");
     localFrame1.contentWindow.document.body.appendChild(frame1Child);
 
     var frame2Child = document.createElement("p");
-    frame2Child.textContent="second frame";
+    frame2Child.textContent = "second frame";
     var localFrame2 = document.querySelector("#localFrame2");
     localFrame2.contentWindow.document.body.appendChild(frame2Child);
   </script>
