@@ -1,14 +1,28 @@
 ﻿<!DOCTYPE html>
-<html><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <title>Cross SDK test</title>
-	<style>
-		div {
-			font-family: "Arial", sans-serif;
-			line-height: 18px;
-		}
-	</style>
+<html>
+
+<head lang="en">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Cross SDK test</title>
+  <style>
+    div {
+      font-family: "Arial", sans-serif;
+      line-height: 18px;
+    }
+
+    *::-webkit-scrollbar {
+      width: 15px;
+      height: 15px;
+      background: lightgray;
+    }
+
+    *::-webkit-scrollbar-thumb {
+      background: gray;
+    }
+  </style>
 </head>
+
 <body>
   <div id="inner-frame-div" style="width: 300px; height: 180px; overflow: hidden; border: 2px solid black;">
     AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -28,9 +42,11 @@
     OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
   </div>
 
-    <iframe name="frame1-1" src="./frame3.html" style="position: relative; left: 50px;" width="450" height="350"></iframe>
+  <iframe name="frame1-1" src="./frame3.html" style="position: relative; left: 50px;" width="450" height="350"></iframe>
   <br>
   <br>
 
 
-</body></html>
+</body>
+
+</html>
