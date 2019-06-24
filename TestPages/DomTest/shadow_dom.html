@@ -1,0 +1,24 @@
+<html>
+
+<head>
+  <title>shadow dom test</title>
+</head>
+
+<body>
+  <div class="host">
+    <span>normal dom</span>
+  </div>
+
+  <script>
+    const host = document.querySelector('.host');
+    const shadow = host.attachShadow({ mode: 'open' });
+    const img = document.createElement('img');
+    img.src = 'minions-800x500.jpg';
+    shadow.appendChild(img);
+    const div = document.createElement('div');
+    div.innerHTML = 'inner div';
+    shadow.appendChild(div);
+  </script>
+</body>
+
+</html>
