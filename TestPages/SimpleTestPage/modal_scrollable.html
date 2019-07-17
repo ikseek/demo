@@ -66,6 +66,10 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
+    .modal-body {
+      position: relative;
+    }
+
     .modal .modal-header .glyphicon.glyphicon-print,
     .modal .modal-header .glyphicon.glyphicon-text-size {
       top: 0;
@@ -106,11 +110,11 @@
     }
 
     .modal .modal-header {
+      padding: 15px;
       border-bottom: 0;
       padding-bottom: 0;
       margin-bottom: 15px;
       padding-left: 20px;
-      padding: 15px;
       min-height: 16.428571429px;
     }
 
@@ -128,7 +132,9 @@
       content: '';
     }
 
-    *:before {
+    *,
+    *:before,
+    *:after {
       box-sizing: border-box;
     }
 
@@ -146,13 +152,21 @@
     .modal .modal-body.pre-scrollable {
       width: 95%;
       padding: 10px;
-      margin-bottom: 15px;
       margin: 0 auto;
+      margin-bottom: 15px;
     }
 
     .pre-scrollable {
       max-height: 340px;
       overflow-y: scroll;
+    }
+
+    .model .modal-body p {
+      font-size: 16px;
+    }
+
+    p {
+      margin: 0 0 11px;
     }
 
     .btn {
@@ -194,8 +208,36 @@
       margin-top: 0;
       box-sizing: border-box;
     }
+
+    .modal.fade .modal-dialog {
+      -webkit-transform: translate(0, -25%);
+      -ms-transform: translate(0, -25%);
+      transform: translate(0, -25%);
+      -webkit-transition: -webkit-transform .3s ease-out;
+      -moz-transition: -moz-transform .3s ease-out;
+      -o-transition: -o-transform .3s ease-out;
+      transition: transform .3s ease-out;
+    }
+
+    .modal.in .modal-dialog {
+      -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+      transform: translate(0, 0);
+    }
+
+    .modal-footer:before,
+    .modal-footer:after {
+      content: " ";
+      display: table;
+    }
+
+    .modal-footer:after {
+      clear: both;
+    }
   </style>
 </head>
+modal fade nine-one-one ng-scope ng-isolate-scope
+modal fade nine-one-one ng-scope ng-isolate-scope in
 
 <body>
   <div data-c-modal="model.customerInfo.contracts.show" class="modal fade nine-one-one ng-scope ng-isolate-scope in"
