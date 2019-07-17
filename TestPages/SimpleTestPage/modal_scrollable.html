@@ -1,0 +1,301 @@
+<html>
+
+<head>
+  <style>
+    body {
+      font-family: 'open_sansregular', Arial, sans-serif;
+    }
+
+    .modal-content {
+      -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      position: relative;
+      background-color: #fff;
+      border: 1px solid #999;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+      -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+      background-clip: padding-box;
+      outline: 0;
+    }
+
+    .modal-backdrop.in {
+      opacity: .5;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1040;
+      background-color: #000;
+    }
+
+    .modal {
+      display: none;
+      overflow: auto;
+      overflow-y: scroll;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1050;
+      outline: 0;
+    }
+
+    .pull-right {
+      float: right !important;
+    }
+
+    :not(.buyflow-localization) .modal .modal-header .close-btn {
+      bottom: -10px;
+    }
+
+    .glyphicon,
+    .picker .picker__nav--prev,
+    .picker .picker__nav--next {
+      position: relative;
+      top: 1px;
+      display: inline-block;
+      font-family: 'Glyphicons Halflings';
+      font-style: normal;
+      font-weight: normal;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .modal .modal-header .glyphicon.glyphicon-print,
+    .modal .modal-header .glyphicon.glyphicon-text-size {
+      top: 0;
+      padding: 10px;
+      font-size: 16px;
+      color: #00629b;
+      position: relative;
+      z-index: 50;
+      cursor: pointer;
+    }
+
+    .modal .modal-header .close-btn {
+      position: relative;
+      bottom: 10px;
+      cursor: pointer;
+      color: #00629b;
+    }
+
+    .modal h2,
+    .modal h3 {
+      font-family: 'open_sansregular', Arial, sans-serif;
+      margin: 0;
+      font-weight: bold;
+      font-size: 22px;
+      margin-top: 20px;
+    }
+
+    .modal .modal-body h3.section-type-TITLE {
+      font-size: 20px;
+      padding-top: 10px;
+      color: #333;
+    }
+
+    .modal .modal-body.pre-scrollable p {
+      margin-top: 15px;
+      color: #007ac2;
+      cursor: text;
+    }
+
+    .modal .modal-header {
+      border-bottom: 0;
+      padding-bottom: 0;
+      margin-bottom: 15px;
+      padding-left: 20px;
+      padding: 15px;
+      min-height: 16.428571429px;
+    }
+
+    .modal-dialog {
+      width: 600px;
+      margin: 30px auto;
+      position: relative;
+    }
+
+    .glyphicon-print:before {
+      content: "\e045";
+    }
+
+    .modal .modal-header .glyphicon-text-size::before {
+      content: '';
+    }
+
+    *:before {
+      box-sizing: border-box;
+    }
+
+    .hiddenReadable {
+      position: absolute;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      width: 1px;
+      margin: -1px;
+      padding: 0;
+      border: 0;
+    }
+
+    .modal .modal-body.pre-scrollable {
+      width: 95%;
+      padding: 10px;
+      margin-bottom: 15px;
+      margin: 0 auto;
+    }
+
+    .pre-scrollable {
+      max-height: 340px;
+      overflow-y: scroll;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-bottom: 0;
+      font-weight: normal;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      background-image: none;
+      border: 1px solid transparent;
+      white-space: nowrap;
+      padding: 6px 12px;
+      font-size: 16px;
+      line-height: 1.428571429;
+      border-radius: 0;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .btn.btn-primary {
+      background-color: #f3621f;
+      margin-top: 0px;
+      position: relative;
+      font-size: 22px;
+      text-transform: uppercase;
+      font-family: 'open_sansbold', 'open_sansregular', Arial, sans-serif;
+      color: #fff;
+      border-color: #ec530d;
+    }
+
+    .modal .modal-footer {
+      text-align: right;
+      margin-right: 10px;
+      padding: 0 20px 20px;
+      border-top: 0;
+      margin-top: 0;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <div data-c-modal="model.customerInfo.contracts.show" class="modal fade nine-one-one ng-scope ng-isolate-scope in"
+    id="agree-nine-one-one" tabindex="-1" role="dialog" data-aria-labelledby="myModalLabel" data-aria-hidden="true"
+    data-ng-if="model.customerInfo.agreementsRequired" aria-hidden="false" style="display: block;">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <!--Modal-header-->
+        <div class="modal-header" data-print-window="">
+          <span class="pull-right close-btn" role="button" dismiss="modal" aria-hidden="true"
+            data-ng-click="processClose911('details_e911')" tabindex="0" aria-label="Close">Close<span
+              class="material-sprite close">&nbsp;</span></span>
+          <!--TODO Remove this section-->
+          <!--h2 id="AgreeToCarrierIcons">
+                <div class="close-btn pull-right" data-aria-label="close dialog button" data-dismiss="modal" data-aria-hidden="true" data-ng-click="closeModal()">Close <span class="material-sprite close">&nbsp;</span></div>
+                    <span class="hiddenReadable hiddenReadable-agree911">Close</span>
+
+                </h2-->
+          <h2 id="AgreeToCarrierHeader">Agree to Carrier Change/911 Acknowledgement
+            <div class="pull-right">
+              <!-- ngIf: model.buyflowChannelKey!='mobile' --><a href="#" data-c-toggle-class="'bigger'"
+                targetelement="'#agree-nine-one-one .modal-body p'" data-ng-if="model.buyflowChannelKey!='mobile'"
+                class="ng-scope ng-isolate-scope"> <span class="glyphicon glyphicon-text-size"></span> <span
+                  class="hiddenReadable">Enlage/reduce text size</span> </a>
+              <!-- end ngIf: model.buyflowChannelKey!='mobile' -->
+              <!-- ngIf: model.buyflowChannelKey!='mobile' --><span class="glyphicon glyphicon-print ng-scope"
+                data-ng-click="openWindow()" data-ng-if="model.buyflowChannelKey!='mobile'" aria-label="Print"
+                role="button" tabindex="0"></span><!-- end ngIf: model.buyflowChannelKey!='mobile' -->
+              <span class="hiddenReadable">Print</span>
+            </div>
+          </h2>
+        </div>
+        <!--modal-body-->
+        <div class="modal-body pre-scrollable" aria-labelledby="AgreeToCarrierHeader">
+          <!-- ngRepeat: sectionTO in model.customerInfo.contracts.contractsTO.sectionTOs -->
+          <div data-ng-repeat="sectionTO in model.customerInfo.contracts.contractsTO.sectionTOs" class="ng-scope">
+            <!-- ngIf: sectionTO.type==='TITLE' -->
+            <h3 data-ng-if="sectionTO.type==='TITLE'" data-ng-bind-html="sectionTO.text" class="section-type-TITLE">
+              Spectrum™ Voice E911 Services Acknowledgment</h3><!-- end ngIf: sectionTO.type==='TITLE' -->
+            <!-- ngIf: sectionTO.type!=='TITLE' -->
+          </div><!-- end ngRepeat: sectionTO in model.customerInfo.contracts.contractsTO.sectionTOs -->
+          <div data-ng-repeat="sectionTO in model.customerInfo.contracts.contractsTO.sectionTOs" class="ng-scope">
+            <!-- ngIf: sectionTO.type==='TITLE' -->
+            <!-- ngIf: sectionTO.type!=='TITLE' -->
+            <p data-ng-if="sectionTO.type!=='TITLE'" data-ng-bind-html="sectionTO.text" class="section-type-DESCR">By
+              providing your electronic signature below, you are confirming your understanding of Charter
+              Communications' Spectrum Voice E911 service.</p><!-- end ngIf: sectionTO.type!=='TITLE' -->
+          </div><!-- end ngRepeat: sectionTO in model.customerInfo.contracts.contractsTO.sectionTOs -->
+          <div data-ng-repeat="sectionTO in model.customerInfo.contracts.contractsTO.sectionTOs" class="ng-scope">
+            <!-- ngIf: sectionTO.type==='TITLE' -->
+            <!-- ngIf: sectionTO.type!=='TITLE' -->
+            <p data-ng-if="sectionTO.type!=='TITLE'" data-ng-bind-html="sectionTO.text" class="section-type-DESCR">
+              Spectrum Voice service does not have its own power supply. If there is a power outage or a disruption to
+              the cable network, Spectrum Voice service will not work. In such cases it will not be possible to place or
+              receive calls and your modem will not work.</p><!-- end ngIf: sectionTO.type!=='TITLE' -->
+          </div><!-- end ngRepeat: sectionTO in model.customerInfo.contracts.contractsTO.sectionTOs -->
+          <div data-ng-repeat="sectionTO in model.customerInfo.contracts.contractsTO.sectionTOs" class="ng-scope">
+            <!-- ngIf: sectionTO.type==='TITLE' -->
+            <!-- ngIf: sectionTO.type!=='TITLE' -->
+            <p data-ng-if="sectionTO.type!=='TITLE'" data-ng-bind-html="sectionTO.text" class="section-type-DESCR">The
+              emergency provider handling the 911 call, and the address the emergency provider will see, are linked to
+              your service address on file with Charter. Spectrum Voice equipment must not be moved to a new address
+              without first contacting us with the new location. If it is relocated, and you dial 911, you will need to
+              provide your address to the 911 operator or 911 calls may be misdirected to the wrong location or wrong
+              emergency provider. During the first 72 hours after initiating service or advising us of an address
+              change, if you dial 911, you must relay the new service address to the emergency operator.</p>
+            <!-- end ngIf: sectionTO.type!=='TITLE' -->
+          </div><!-- end ngRepeat: sectionTO in model.customerInfo.contracts.contractsTO.sectionTOs -->
+          <div data-ng-repeat="sectionTO in model.customerInfo.contracts.contractsTO.sectionTOs" class="ng-scope">
+            <!-- ngIf: sectionTO.type==='TITLE' -->
+            <!-- ngIf: sectionTO.type!=='TITLE' -->
+            <p data-ng-if="sectionTO.type!=='TITLE'" data-ng-bind-html="sectionTO.text" class="section-type-DESCR">This
+              is necessary to ensure emergency services are dispatched to your new service address because the emergency
+              operator may not have the new service address in their records.</p>
+            <!-- end ngIf: sectionTO.type!=='TITLE' -->
+          </div><!-- end ngRepeat: sectionTO in model.customerInfo.contracts.contractsTO.sectionTOs -->
+          <div data-ng-repeat="sectionTO in model.customerInfo.contracts.contractsTO.sectionTOs" class="ng-scope">
+            <!-- ngIf: sectionTO.type==='TITLE' -->
+            <!-- ngIf: sectionTO.type!=='TITLE' -->
+            <p data-ng-if="sectionTO.type!=='TITLE'" data-ng-bind-html="sectionTO.text" class="section-type-DESCR">In
+              some locations, depending on the equipment used by local governments to provide 911 service, you will
+              always need to convey the 911 service location information to the emergency operator.</p>
+            <!-- end ngIf: sectionTO.type!=='TITLE' -->
+          </div><!-- end ngRepeat: sectionTO in model.customerInfo.contracts.contractsTO.sectionTOs -->
+          <div data-ng-repeat="sectionTO in model.customerInfo.contracts.contractsTO.sectionTOs" class="ng-scope">
+            <!-- ngIf: sectionTO.type==='TITLE' -->
+            <!-- ngIf: sectionTO.type!=='TITLE' -->
+            <p data-ng-if="sectionTO.type!=='TITLE'" data-ng-bind-html="sectionTO.text" class="section-type-ACRNI">By
+              clicking on "I agree" below, you acknowledge that you have received and understand this information.</p>
+            <!-- end ngIf: sectionTO.type!=='TITLE' -->
+          </div><!-- end ngRepeat: sectionTO in model.customerInfo.contracts.contractsTO.sectionTOs -->
+        </div>
+        <!--Modal Footer-->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default btn-md btn-primary"
+            data-ng-click="processAgree911('details_e911')">I agree</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-backdrop fade in"></div>
+</body>
+<html>
