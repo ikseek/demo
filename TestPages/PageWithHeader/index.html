@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Cross SDK Test</title>
+  <style>
+    .navbar {
+      background: #dd6312;
+      color: white;
+      font-size: larger;
+      height: 5em;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+    }
+
+    .navbar>p {
+      margin: 2em;
+      display: inline-block;
+    }
+
+    .navbar>div.hamburger {
+      display: inline-block;
+      font-size: xx-large;
+      background: rgba(255, 255, 255, 0.5);
+      color: black;
+      width: 1.1em;
+      height: 1.1em;
+      text-align: center;
+      border-radius: 50%;
+      position: absolute;
+      top: 1em;
+      right: 1em;
+    }
+
+    .page {
+      top: 5em;
+      padding: 2em;
+      font-size: larger;
+      text-align: justify;
+      line-height: 1.25em;
+      position: relative;
+      right: 0;
+      left: 0;
+      bottom: 0;
+    }
+
+    .page p:nth-of-type(1)::first-letter {
+      float: left;
+      font-size: 2.45em;
+      margin: 0.1em 0.1em 0 0;
+      border: 1px solid black;
+      background: aquamarine;
+      padding: 0.18em;
+    }
+
+    .fin {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <p>This is the navigation bar</p>
+    <div class="hamburger">&equiv;</div>
+  </div>
+  <div class="page">
+    <h1>Lorem Ipsum</h1>
+    <div id="lipsum">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta diam sodales ligula aliquam gravida. Donec
+        sit amet metus sed tellus bibendum pharetra. Vivamus vel enim ex. Ut pretium ac turpis in ornare. Donec sodales
+        odio semper nibh elementum, sed elementum orci viverra. Vestibulum sed enim consectetur, pharetra elit et,
+        semper dolor. Sed a nibh auctor, varius est sit amet, accumsan sem.
+      </p>
+      <p>
+        Aenean imperdiet ante sed diam eleifend elementum. Nullam porttitor, diam sed interdum hendrerit, magna nulla
+        faucibus mauris, a aliquet mauris mauris at elit. Vestibulum consequat tempus quam, faucibus mollis purus
+        porttitor vel. Sed dignissim dictum purus ac pellentesque. Sed consequat dictum leo, at volutpat augue lacinia
+        iaculis. Nullam pulvinar lorem dui, sit amet hendrerit tortor efficitur ut. Nam in vulputate tellus. Suspendisse
+        potenti. Aliquam non purus nec erat varius luctus in et augue. Pellentesque nulla odio, tincidunt non suscipit
+        a, venenatis tristique sem. Proin a eros maximus, sagittis leo id, elementum augue. Nunc aliquet, mi pretium
+        ullamcorper ultrices, lorem justo fermentum neque, quis ultricies ex massa quis velit. Praesent tristique libero
+        nisl, at suscipit nunc finibus id. Duis varius sem at augue ultrices vehicula. Vivamus vehicula neque feugiat,
+        auctor leo fringilla, vehicula ante. Nullam vitae nunc ac urna vestibulum feugiat eu id libero.
+      </p>
+      <p>
+        Donec aliquam ipsum sit amet tellus sagittis fringilla. Nunc ullamcorper nisl id porta mollis. Aliquam odio
+        tortor, gravida nec accumsan id, sollicitudin id est. Vivamus at lacinia leo. Aliquam pharetra metus quis tellus
+        eleifend consectetur. Donec sagittis venenatis fermentum. Praesent fermentum dignissim iaculis.
+      </p>
+      <p>
+        Curabitur elementum efficitur lorem nec ultricies. Suspendisse placerat, purus quis efficitur posuere, turpis
+        urna convallis orci, quis scelerisque nulla nulla et eros. Sed vel convallis velit. Sed vulputate ante eleifend
+        ullamcorper maximus. Vestibulum ac leo vitae erat porttitor consectetur quis in urna. Suspendisse pharetra in
+        ipsum sit amet mattis. Nam ultrices convallis purus vel dictum. Donec vitae lacus augue. Suspendisse potenti.
+        Vestibulum nibh lacus, feugiat sit amet elementum vel, mollis nec massa. Duis tincidunt eleifend tortor, in
+        euismod purus. Mauris nibh elit, placerat id condimentum nec, rutrum a ipsum. Proin suscipit lorem in mollis
+        interdum. Ut finibus sapien neque, in venenatis ligula aliquet id. Aliquam erat volutpat. In hac habitasse
+        platea dictumst.
+      </p>
+      <p>
+        Curabitur dictum, tellus quis elementum efficitur, erat libero lobortis ipsum, in bibendum lectus tortor ut
+        urna. Phasellus volutpat volutpat velit eu rhoncus. Ut vehicula felis porttitor sollicitudin finibus. Sed sed
+        neque pulvinar, congue enim quis, iaculis dolor. Duis tristique purus ac pretium dapibus. Quisque faucibus
+        mollis tempor. In hac habitasse platea dictumst. Suspendisse nec ante eget ante pulvinar bibendum.
+      </p>
+      <p>
+        Quisque ornare faucibus erat, sed congue dolor aliquet in. Aliquam vitae sem a erat dignissim sagittis. Sed
+        dapibus nulla odio, vitae pellentesque nunc tristique ut. Donec suscipit ac felis non tempus. Vestibulum felis
+        magna, tincidunt nec purus in, porttitor porta urna. Etiam lacus ex, congue id efficitur a, pretium molestie
+        felis. Fusce sollicitudin tortor vitae varius dictum. Quisque vitae suscipit purus, maximus fermentum tellus.
+        Duis vitae ipsum eget tellus facilisis suscipit ut non nisi. Donec velit ligula, molestie elementum metus nec,
+        pulvinar placerat est. Pellentesque justo eros, porttitor et arcu eu, rhoncus consequat lectus. Proin tincidunt
+        velit ac lacinia sodales. Morbi feugiat tortor odio, ornare euismod urna imperdiet in. Nulla gravida tortor
+        massa.
+      </p>
+      <p>
+        Sed dignissim luctus nulla, quis condimentum erat hendrerit et. Nullam nec volutpat ligula. Maecenas luctus orci
+        nunc, a viverra augue ullamcorper nec. Cras sed sapien ut massa fringilla semper vel a nibh. Integer et mauris
+        condimentum, consectetur orci id, finibus mi. Sed imperdiet vulputate tortor, non dictum mi feugiat nec. Proin
+        turpis nibh, imperdiet quis turpis quis, dapibus tincidunt ante. Cras vitae tincidunt leo. In vitae velit
+        tortor. Proin quis magna porta, dignissim purus vel, sodales nunc. Nulla congue diam sed interdum fermentum.
+        Suspendisse elementum pulvinar nisi, ac imperdiet erat feugiat vitae. Integer venenatis est ac vehicula dictum.
+        Praesent quis nibh sit amet purus suscipit venenatis sed finibus nisl.
+      </p>
+      <p>
+        Nam ut libero sem. Nulla placerat libero sed nisi dictum faucibus. Nulla facilisi. Ut ac vehicula elit.
+        Pellentesque interdum risus elit, eget tincidunt turpis sollicitudin nec. Suspendisse nec tellus nec tortor
+        placerat facilisis. Quisque tincidunt hendrerit dolor, eu feugiat augue tempus id. Sed at ornare nibh.
+      </p>
+      <p>
+        Sed elit elit, convallis id felis non, tempus vulputate diam. Vestibulum tempus fringilla elit, et tincidunt
+        lacus tincidunt at. Nunc at blandit nulla. Morbi accumsan massa finibus, molestie metus eget, luctus justo.
+        Donec semper est id tortor faucibus pretium. Cras sed blandit mauris. Duis neque urna, volutpat in mollis ac,
+        elementum vel mauris. Pellentesque cursus, nibh non fermentum tristique, quam odio sagittis lacus, eu egestas
+        risus libero in purus. In ante magna, commodo et nibh eu, vehicula lacinia nisl. Aliquam sit amet nibh et nibh
+        malesuada dignissim quis et odio. Quisque mattis sapien ac nisi aliquam, eu tempus lectus feugiat. Etiam ac
+        volutpat erat, quis viverra tortor.
+      </p>
+      <p>
+        Cras iaculis tincidunt tellus, a dictum lacus elementum ut. Nunc varius, lacus quis iaculis scelerisque, nibh
+        lacus scelerisque libero, a semper risus turpis vitae metus. Aliquam ornare tincidunt nisl, non auctor eros
+        vehicula non. Donec nec pulvinar dolor. Sed pulvinar quam dictum tortor posuere dictum. Integer porta sapien a
+        neque placerat, nec efficitur neque semper. Vivamus rhoncus lacus at massa consectetur porttitor. Vivamus
+        elementum hendrerit lorem nec tincidunt. In sollicitudin porttitor turpis, eu finibus sem varius in.
+      </p>
+      <p class="fin">~ FIN ~</p>
+    </div>
+  </div>
+</body>
+
+</html>
