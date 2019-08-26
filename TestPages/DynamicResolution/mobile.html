@@ -13,7 +13,14 @@
     #data {
       height: calc(100vh - 5ex);
       border: 1pt red solid;
+      padding: 0;
+    }
+
+    #ios {
+      height: calc(100vh - 10ex);
+      border: 1pt blue solid;
       padding: 8px;
+      margin: 0;
     }
 
     p {
@@ -29,9 +36,11 @@
 
 <body>
   <div id="data">
-    <h1>Mobile</h1>
-    <p>Inner Width: <span id="innerWidth"></span></p>
-    <p>Inner Height: <span id="innerHeight"></span></p>
+    <div id="ios">
+      <h1>Mobile</h1>
+      <p>Inner Width: <span id="innerWidth"></span></p>
+      <p>Inner Height: <span id="innerHeight"></span></p>
+    </div>
   </div>
   <div id="page" style="height:200vh; background: yellowgreen;">
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum vitae a quidem dolorem vel fugit neque error
