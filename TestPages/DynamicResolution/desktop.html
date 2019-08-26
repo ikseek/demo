@@ -1,0 +1,34 @@
+<!doctype HTML>
+<html>
+
+<head>
+  <style>
+    p {
+      font-size: xx-large;
+    }
+
+    span {
+      color: darkgreen;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Desktop</h1>
+  <div id="data">
+    <p>Inner Width: <span id="innerWidth"></span></p>
+    <p>Inner Height: <span id="innerHeight"></span></p>
+  </div>
+  <script>
+    function updateData() {
+      var iW = document.getElementById("innerWidth");
+      var iH = document.getElementById("innerHeight");
+      iW.innerHTML = window.innerWidth + " px";
+      iH.innerHTML = window.innerHeight + " px";
+    }
+    updateData();
+    window.addEventListener("resize", updateData);
+  </script>
+</body>
+
+</html>
