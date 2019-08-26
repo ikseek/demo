@@ -3,8 +3,21 @@
 
 <head>
   <style>
+    body {
+      border: 2pt solid;
+      padding: 8px;
+      margin: 0;
+    }
+
+    #data {
+      height: calc(100vh - 5ex);
+      border: 1pt red solid;
+      padding: 8px;
+    }
+
     p {
       font-size: xx-large;
+      padding: 1ex;
     }
 
     span {
@@ -14,10 +27,22 @@
 </head>
 
 <body>
-  <h1>Desktop</h1>
   <div id="data">
+    <h1>Desktop</h1>
     <p>Inner Width: <span id="innerWidth"></span></p>
     <p>Inner Height: <span id="innerHeight"></span></p>
+  </div>
+  <div id="page" style="height:200vh; background: yellowgreen;">
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum vitae a quidem dolorem vel fugit neque error
+      eius? Alias at velit, illo eaque est officia vero quis soluta exercitationem minima.</p>
+    <p>Blanditiis quaerat beatae et, ab nisi delectus adipisci reprehenderit laborum vero praesentium autem enim
+      aliquid. Reprehenderit doloribus magni laboriosam. Nostrum,
+      repudiandae in!</p>
+    <p>Fuga odit fugiat quibusdam! Error blanditiis id
+      possimus accusantium reiciendis placeat reprehenderit pariatur itaque adipisci similique doloremque, vero dolorum
+      qui. Similique, ea.</p>
+    <p>Eveniet impedit porro ipsum necessitatibus rem eum itaque neque a ab molestias asperiores inventore cupiditate,
+      provident sapiente dolorum laboriosam soluta commodi perferendis.</p>
   </div>
   <script>
     function updateData() {
