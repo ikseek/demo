@@ -2,7 +2,12 @@
 <html>
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0">
   <style>
+    html {
+      width: fit-content;
+    }
+
     body {
       border: 2pt solid;
       padding: 8px;
@@ -12,7 +17,19 @@
     #data {
       height: calc(100vh - 5ex);
       border: 1pt red solid;
+      padding: 0;
+    }
+
+    #ios {
+      height: calc(100vh - 10ex);
+      border: 1pt blue solid;
       padding: 8px;
+      margin: 0;
+    }
+
+    div.size-info {
+      font-size: x-large;
+      white-space: nowrap;
     }
 
     p {
@@ -27,15 +44,13 @@
 
 <body>
   <div id="data">
-    <h1>Desktop</h1>
-    <p>Outer Width: <span id="outerWidth"></span></p>
-    <p>Outer Height: <span id="outerHeight"></span></p>
-    <p>Inner Width: <span id="innerWidth"></span></p>
-    <p>Inner Height: <span id="innerHeight"></span></p>
-    <p>Scroll Width: <span id="scrollWidth"></span></p>
-    <p>Scroll Height: <span id="scrollHeight"></span></p>
-    <p>Client Width: <span id="clientWidth"></span></p>
-    <p>Client Height: <span id="clientHeight"></span></p>
+    <div id="ios">
+      <h1>Scrolled Mobile</h1>
+      <div class="size-info">Outer Width: <span id="outerWidth"></span> | Outer Height: <span id="outerHeight"></span></div>
+      <div class="size-info">Inner Width: <span id="innerWidth"></span> | Inner Height: <span id="innerHeight"></span></div>
+      <div class="size-info">Scroll Width: <span id="scrollWidth"></span> | Scroll Height: <span id="scrollHeight"></span></div>
+      <div class="size-info">Client Width: <span id="clientWidth"></span> | Client Height: <span id="clientHeight"></span></div>
+    </div>
   </div>
   <div id="page" style="height:200vh; background: yellowgreen;">
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum vitae a quidem dolorem vel fugit neque error

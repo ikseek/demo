@@ -24,8 +24,7 @@
     }
 
     p {
-      font-size: xx-large;
-      padding: 1ex;
+      font-size: x-large;
     }
 
     span {
@@ -38,8 +37,14 @@
   <div id="data">
     <div id="ios">
       <h1>Mobile</h1>
+      <p>Outer Width: <span id="outerWidth"></span></p>
+      <p>Outer Height: <span id="outerHeight"></span></p>
       <p>Inner Width: <span id="innerWidth"></span></p>
       <p>Inner Height: <span id="innerHeight"></span></p>
+      <p>Scroll Width: <span id="scrollWidth"></span></p>
+      <p>Scroll Height: <span id="scrollHeight"></span></p>
+      <p>Client Width: <span id="clientWidth"></span></p>
+      <p>Client Height: <span id="clientHeight"></span></p>
     </div>
   </div>
   <div id="page" style="height:200vh; background: yellowgreen;">
@@ -56,10 +61,22 @@
   </div>
   <script>
     function updateData() {
+      var oW = document.getElementById("outerWidth");
+      var oH = document.getElementById("outerHeight");
       var iW = document.getElementById("innerWidth");
       var iH = document.getElementById("innerHeight");
+      var sW = document.getElementById("scrollWidth");
+      var sH = document.getElementById("scrollHeight");
+      var cW = document.getElementById("clientWidth");
+      var cH = document.getElementById("clientHeight");
+      oW.innerHTML = window.outerWidth + " px";
+      oH.innerHTML = window.outerHeight + " px";
       iW.innerHTML = window.innerWidth + " px";
       iH.innerHTML = window.innerHeight + " px";
+      sW.innerHTML = document.documentElement.scrollWidth + " px";
+      sH.innerHTML = document.documentElement.scrollHeight + " px";
+      cW.innerHTML = document.documentElement.clientWidth + " px";
+      cH.innerHTML = document.documentElement.clientHeight + " px";
     }
     updateData();
     window.addEventListener("resize", updateData);
