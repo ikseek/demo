@@ -12,3 +12,7 @@ p {
   border: 1px solid blue;
   font-family: 'Abril Fatface';
 }
+html{
+  background-image: url(minions-800x500.jpg);
+  background: url(minions-800x500_green_sideways.png), lightblue;
+}
