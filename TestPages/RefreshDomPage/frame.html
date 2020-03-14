@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Refresh DOM Frame</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #inner-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="inner-wrapper">
+    <img id="inner-img" src="./minions-300x188.jpg">
+    <hr>
+    <button onclick="refresh()">Refresh image</button>
+  </div>
+  <script>
+    function refresh(a) {
+      const img = document.querySelector('#inner-img');
+      const replacer = document.createElement('img');
+      Array.prototype.forEach.call(img.attributes, attr => {
+        replacer.setAttribute(attr.name, attr.value);
+      });
+      img.replaceWith(replacer);
+    }
+  </script>
+</body>
+</html>
