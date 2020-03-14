@@ -9,20 +9,20 @@
       padding: 0;
     }
     #inner-wrapper {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
+      padding: 20px;
+    }
+    #buttons {
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
   <div id="inner-wrapper">
     <img id="inner-img" src="./minions-300x188.jpg">
-    <hr>
-    <button id="refresh-button" onclick="refresh()">Refresh image</button>
-    <button id="invalidate-button" onclick="invalidate()">Invalidate image</button>
+    <div id="buttons">
+      <button id="refresh-button" onclick="refresh()">Refresh image</button>
+      <button id="invalidate-button" onclick="invalidate()">Invalidate image</button>
+    <div>
   </div>
   <script>
     function refresh() {
