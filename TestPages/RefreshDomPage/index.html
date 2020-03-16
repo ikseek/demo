@@ -1,23 +1,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Refresh DOM Page</title>
+  <title>Refresh DOM Iframe</title>
   <style>
     html, body {
-      background-color: dimgray;
+      margin: 0;
+      padding: 0;
     }
-    #header {
-      margin: 0 0 10px 0;
-      color: white;
-    }
-    #frame {
-      height: 300px;
-      border: none;
+    #buttons {
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <h1 id="header">Refresh DOM Page</h1>
-  <iframe name="frame" id="frame" src="./frame.html"></iframe>
+  <div id="inner-wrapper">
+    <img id="inner-img" src="./minions-300x188.jpg">
+    <div id="buttons">
+      <button id="refresh-button" onclick="refresh()">Refresh image</button>
+      <button id="invalidate-button" onclick="invalidate()">Invalidate image</button>
+    <div>
+  </div>
+  <script>
+    function refresh() {
+      const img = document.querySelector('#inner-img');
+      const replacer = document.createElement('img');
+      Array.prototype.forEach.call(img.attributes, attr => {
+        replacer.setAttribute(attr.name, attr.value);
+      });
+      img.replaceWith(replacer);
+    }
+    function invalidate() {
+      const img = document.querySelector('#inner-img');
+      const replacer = document.createElement('img');
+      Array.prototype.forEach.call(img.attributes, attr => {
+        if (attr.name === 'id') {
+          replacer.setAttribute('class', attr.value);
+        } else {
+          replacer.setAttribute(attr.name, attr.value);
+        }
+      });
+      img.replaceWith(replacer);
+    }
+  </script>
 </body>
 </html>
