@@ -1,0 +1,46 @@
+<style>
+html {
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+</style>
+<h1>
+  Dom Snapshot static files
+</h1>
+<script>
+window.onload = function() {
+  const files = [
+"basic-page.html",
+"canvas.html",
+"cors-css-rules-container.html",
+"cors-css-rules.html",
+"cssom.html",
+"cssUri.html",
+"ie-frame.html",
+"ie.html",
+"import.html",
+"index.html",
+"inline-url.html",
+"links.html",
+"possible-cors.html",
+"reject-process-page.html",
+"shadow-dom-frame.html",
+"shadow-dom.html",
+"svg-links.html",
+"test.html",
+"test-iframe.html",
+"test-visual-grid.html",
+];
+const d = document;
+const ul = d.createElement('ul');
+d.body.appendChild(ul);
+files.forEach(file => {
+  const li = d.createElement('li');
+  const a = d.createElement('a');
+  a.setAttribute('href', file);
+  a.textContent = file;
+  li.appendChild(a);
+  ul.appendChild(li);
+})
+}
+</script>
