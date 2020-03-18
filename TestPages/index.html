@@ -1,0 +1,84 @@
+<style>
+  html {
+    font-family: sans-serif;
+    line-height: 1.5;
+  }
+  </style>
+  <h1>
+    Dom Snapshot static files
+  </h1>
+  <script>
+  window.onload = function() {
+    const files = [
+"PageWithHeader/index.html",
+"MinionsTestPage/index.html",
+"DomTest/shadow_dom.html",
+"DomTest/dom_capture.html",
+"DomTest/dom_capture_2.html",
+"DomTest/frame.html",
+"VisualGridTestPageWithRelativeBGImage/index.html",
+"VisualGridTestPageWithRelativeBGImage/canvastest.html",
+"VisualGridTestPageWithRelativeBGImage/svgtest.html",
+"VisualGridTestPageWithRelativeBGImage/inline_frame.html",
+"VisualGridTestPageWithRelativeBGImage/duplicates2.html",
+"VisualGridTestPageWithRelativeBGImage/iframeWithJavascriptSrc.html",
+"VisualGridTestPageWithRelativeBGImage/duplicates.html",
+"VisualGridTestPageWithRelativeBGImage/frame.html",
+"FramesTestPage/index.html",
+"FramesTestPage/longframe.html",
+"FramesTestPage/frame2.html",
+"FramesTestPage/frame3.html",
+"PageWithScrollableArea/index.html",
+"CorsTestPage/index.html",
+"CorsTestPage/frame2.html",
+"CorsTestPage/frame3.html",
+"RefreshDomPage/index.html",
+"RefreshDomPage/iframe.html",
+"SimpleTestPage/index.html",
+"SimpleTestPage/modal_scrollable.html",
+"SimpleTestPage/scrollablebody.html",
+"WixLikeTestPage/index.html",
+"WixLikeTestPage/frame2.html",
+"MobileDemo/adaptive.html",
+"MobileDemo/AccessPayments/index.html",
+"SpecialCharacters/index.html",
+"SpecialCases/hero.html",
+"VisualGridTestPage/index.html",
+"VisualGridTestPage/canvastest.html",
+"VisualGridTestPage/svgtest.html",
+"VisualGridTestPage/duplicates2.html",
+"VisualGridTestPage/iframeWithJavascriptSrc.html",
+"VisualGridTestPage/duplicates.html",
+"VisualGridTestPage/frame.html",
+"ErrorPage/index.html",
+"PopupTestPage/index.html",
+"DynamicResolution/scrolled_mobile.html",
+"DynamicResolution/mobile.html",
+"DynamicResolution/desktop.html",
+  ];
+  const d = document;
+  const ul = d.createElement('ul');
+  const folderElements = files.reduce((ulElements, file) => {
+    const [folder] = file.split('/');
+    if (!ulElements[folder]) {
+      const folderEl = d.createElement('li');
+      ul.appendChild(folderEl)
+      folderEl.appendChild(d.createTextNode(folder));
+      const filesUl = d.createElement('ul');
+      folderEl.appendChild(filesUl);
+      ulElements[folder] = filesUl;
+    }
+    return ulElements;
+  }, {})
+  d.body.appendChild(ul);
+  files.forEach(filepath => {
+    const [folder, file] = filepath.split('/');
+    const li = d.createElement('li');
+    const a = d.createElement('a');
+    a.setAttribute('href', filepath);
+    a.textContent = file;
+    li.appendChild(a);
+    folderElements[folder].appendChild(li);
+  })
+  }
+  </script>
