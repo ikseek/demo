@@ -16,6 +16,7 @@
     }
     p {
       margin-bottom: 10px;
+      line-height: 24px;
     }
     dl {
       display: flex;
@@ -32,14 +33,25 @@
       margin: 0;
       padding: 2px 4px;
     }
+    code {
+      background-color: darkslategray;
+      padding: 1px 3px;
+      border-radius: 3px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 14px;
+    }
     button {
       background: whitesmoke;
       border: none;
       border-radius: 3px;
       padding: 3px 7px;
     }
+    #random_wrapper {
+      min-width: 250px;
+      display: inline-block;
+      padding: 30px 0;
+    }
     #random {
-      margin: 30px 0;
       font-size: 25px;
       font-weight: bold;
       color: yellow;
@@ -48,7 +60,11 @@
 </head>
 <body>
   <h1>Randomize Page</h1>
-  <p>This page can be used to generate differences.</p>
+  <p>
+    This page can be used to generate differences.<br>
+    The random content is placed in <code>#random</code>.<br>
+    If you would like to check only a special region with random content you can use <code>#random_wrapper</code>.
+  </p>
   <p>You can provide next query params:</p>
   <dl>
     <dt>default</dt>
@@ -58,7 +74,9 @@
     <dt>randomize</dt>
     <dd>to render the page with random content</dd>
   </dl>
-  <div id="random"></div>
+  <div id="random_wrapper">
+    <span id="random"></span>
+  </div>
   <div>
     <button onclick="toDefault()">To Default</button>
     <button onclick="randomize()">Randomize</button>
