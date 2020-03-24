@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RandomizePage</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <style>
+    body {
+      padding: 20px;
+      background-color: dimgray;
+      color: white;
+    }
+    h1 {
+      font-size: 34px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    dl {
+      display: flex;
+      flex-flow: row wrap;
+    }
+    dt {
+      flex-basis: 20%;
+      padding: 2px 4px;
+      color: #fff;
+    }
+    dd {
+      flex-basis: 70%;
+      flex-grow: 1;
+      margin: 0;
+      padding: 2px 4px;
+    }
+    button {
+      background: whitesmoke;
+      border: none;
+      border-radius: 3px;
+      padding: 3px 7px;
+    }
+    #random {
+      margin: 30px 0;
+      font-size: 25px;
+      font-weight: bold;
+      color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <h1>Randomize Page</h1>
+  <p>This page can be used to generate differences.</p>
+  <p>You can provide next query params:</p>
+  <dl>
+    <dt>default</dt>
+    <dd>to change the default text content</dd>
+    <dt>color</dt>
+    <dd>to change value color</dd>
+    <dt>randomize</dt>
+    <dd>to render the page with random content</dd>
+  </dl>
+  <div id="random"></div>
+  <div>
+    <button onclick="toDefault()">To Default</button>
+    <button onclick="randomize()">Randomize</button>
+  </div>
+  <script>
+    const random = document.querySelector('#random')
+    const props = window.location.search
+      .substring(1)
+      .split('&')
+      .reduce((props, expression) => {
+        const [key, value] = expression.split('=')
+        props[decodeURI(key)] = decodeURI(value)
+        return props
+      }, {
+        default: 'Default Text',
+        randomize: false
+      })
+
+    toDefault()
+    if (props.color) {
+      random.style.color = props.color
+    }
+    if (props.randomize) {
+      randomize()
+    }
+
+    function toDefault() {
+      random.textContent = props.default
+    }
+    function randomize() {
+      random.textContent = generate()
+    }
+    function generate() {
+      return Math.ceil(Math.random() * 10000000000000000)
+    }
+  </script>
+</body>
+</html>
