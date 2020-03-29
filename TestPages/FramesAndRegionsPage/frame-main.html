@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Frames And Regions Page / Main</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <style>
+    *::-webkit-scrollbar {
+        width: 15px;
+        height: 15px;
+        background: lightgray;
+    }
+    *::-webkit-scrollbar-thumb {
+        background: gray;
+    }
+    body {
+      padding: 10px;
+      background-color: darkslategrey;
+      color: white;
+    }
+    iframe {
+      width: 100%;
+      border: 2px solid hotpink;
+    }
+    h1 {
+      font-size: 34px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    h3 {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 7px 0;
+    }
+    h3::after {
+      content: ':';
+    }
+    #frame_comb {
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Main</h1>
+  <h3>Iframe text</h3>
+  <iframe name="frame-text" id="frame_text" src="./frame-text.html"></iframe>
+  <h3>Iframe combination</h3>
+  <iframe name="frame-comb" id="frame_comb" src="./frame-comb.html"></iframe>
+  <h3>Iframe CORS</h3>
+  <iframe name="frame-cors" id="frame_cors" src="https://afternoon-savannah-68940.herokuapp.com/#"></iframe>
+</body>
+</html>
