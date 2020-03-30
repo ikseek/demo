@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Frames And Regions Page / Image</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <style>
+    *::-webkit-scrollbar {
+        width: 15px;
+        height: 15px;
+        background: lightgray;
+    }
+    *::-webkit-scrollbar-thumb {
+        background: gray;
+    }
+    body {
+      padding: 10px;
+      color: white;
+    }
+    iframe {
+      border: 2px solid red;
+    }
+    h3 {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 7px 0;
+    }
+    h3::after {
+      content: ':';
+    }
+  </style>
+</head>
+<body>
+  <h3>Iframe image</h3>
+  <iframe name="frame-image" id="frame_image" src="./frame-image.html"></iframe>
+  <h3>Iframe text</h3>
+  <iframe name="frame-text" id="frame_text" src="./frame-text.html"></iframe>
+</body>
+</html>
