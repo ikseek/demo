@@ -1,0 +1,171 @@
+<html>
+  <head>
+    <style>
+      html { height: 100vh; width: 800px; margin: 0 auto; background: #444;}
+      body { overflow: auto; margin: 0;}
+      header { font-size: xx-large; background: green; padding: 2ex; color: white;}
+      section { font-size: x-large; padding: 2ex; background: #aaa;}
+      section.spacer { color: #888; }
+      label { display: block; margin-left: 0.5ex;}
+      input, select { font-size: x-large; padding: 1ex; border-radius: 1ex;}
+      footer { font-size: large; background: gray; padding: 2ex;}
+      form { margin: 0;}
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .radio {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        font-size: 22px;
+        user-select: none;
+        padding-right: 7px;
+      }
+
+      .radio input[type="radio"] {
+        padding: 4px;
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        box-sizing: border-box;
+      }
+
+      .dot {
+        position: relative;
+        top: 7px;
+        left: 0;
+        height: 26px;
+        width: 26px;
+        background-color: #eee;
+        border-radius: 50%;
+        border: 1px solid #1d5b2d;
+      }
+
+      .radio input[type="radio"]:checked~.dot:after {
+        display: block;
+        content: ' ';
+        top: 7px;
+        left: 7px;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        border-radius: 50%;
+        background: #1d5b2d;
+      }
+
+      .row::after { clear: both; }
+      .row::before { content:""; display: table; clear: both; }
+
+    </style>
+  </head>
+  <body>
+    <header>This is the header</header>
+    <main>
+      <form>
+       
+        <div class="row">
+          <section class="spacer">
+            this is spacer
+          </section>
+          
+          <section>
+            <p>Landjaeger shoulder leberkas pig doner salami ground round short loin buffalo swine jowl ham hock cow. Bresaola corned beef swine biltong meatball. Landjaeger turkey salami, leberkas strip steak ribeye bacon shoulder tri-tip pastrami bresaola tongue. Capicola ham frankfurter salami, pork chop short ribs turducken kielbasa alcatra flank sausage sirloin andouille. Sausage frankfurter spare ribs sirloin biltong hamburger kevin ham hock.</p>      
+          </section>
+
+          <section class="spacer">
+            this is spacer
+          </section>
+
+          <section>
+            <label for="field1">Field 1:</label>
+            <input type="text" name="field1" id="field1"/>
+          </section>
+<!-- 
+          <section>
+            <DIV role="radiogroup" class="radio-container">
+              <P>Radio Group:</P>
+              <UL>
+                <LI >
+                  <LABEL >
+                      <SPAN class="radio">
+                        <INPUT role="radio" name="radioGroupName" checked="checked" id="first_radio" type="radio" value="0">
+                        </INPUT>
+                        <DIV class="dot"></DIV>
+                      </SPAN>
+                      First
+                  </LABEL>
+                </LI>
+                <LI >
+                  <LABEL >
+                    <SPAN class="radio">
+                      <INPUT role="radio" name="radioGroupName" id="second_radio" type="radio" value="1">
+                      </INPUT>
+                      <DIV class="dot"></DIV>
+                    </SPAN>
+                    Second
+                  </LABEL>
+                </LI>
+              </UL>
+            </DIV>
+          </section> -->
+        </div>
+       
+        <div style="display: none;">
+          <section class="spacer">
+            this is spacer
+          </section>
+
+          <section>
+            <p>Frankfurter turkey ham hock strip steak kielbasa filet mignon pancetta bresaola pastrami cupim. Tenderloin kevin turducken ground round, porchetta pig shank. Tri-tip pork ball tip pork belly sirloin t-bone fatback flank bresaola. Bresaola biltong corned beef chuck leberkas t-bone cupim, fatback doner jerky boudin. Rump shank tongue kevin bresaola leberkas prosciutto spare ribs ribeye frankfurter boudin tri-tip pork loin. Hamburger sirloin shankle tri-tip.</p>
+          </section>
+          
+          <section>
+            <label for="field2">Field 2:</label>
+            <input type="text" name="field2" id="field2"/>
+          </section>
+
+          <section class="spacer">
+            this is spacer
+          </section>
+
+          <section class="input-container">
+            <DIV class="selectWrapper">
+              <SELECT name="month" id="expirationDateMonth">
+                <OPTION disabled="disabled" value="-1" selected="selected">Month</OPTION>
+                <OPTION value="1">01</OPTION>
+                <OPTION value="2">02</OPTION>
+                <OPTION value="3">03</OPTION>
+                <OPTION value="4">04</OPTION>
+                <OPTION value="5">05</OPTION>
+                <OPTION value="6">06</OPTION>
+                <OPTION value="7">07</OPTION>
+                <OPTION value="8">08</OPTION>
+                <OPTION value="9">09</OPTION>
+                <OPTION value="10">10</OPTION>
+                <OPTION value="11">11</OPTION>
+                <OPTION value="12">12</OPTION>
+              </SELECT>
+            </DIV>
+          </section>
+        </div>
+        
+        <div class="row">
+          <section class="input-container">
+            <LABEL for="field3" class="form-label left">Field 3:</LABEL>
+            <INPUT minlength="1" inputmode="numeric" autocomplete="off" maxlength="17" type="text" required="true" pattern="^[0-9]{1,17}$" 
+                  name="field3" id="field3" class="input-text x1 text-box single-line" value="">
+            </INPUT>
+          </section>
+        
+          <section class="spacer">
+            this is spacer
+          </section>
+        <div>
+
+      </form>
+    </main>
+    <footer>This is the footer</footer>
+  </body>
+</html>
