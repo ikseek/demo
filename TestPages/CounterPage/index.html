@@ -1,0 +1,7 @@
+<div id="counter" style="background:red;padding:10px;line-height:20px;border:1px solid black;position:absolute">Background should be lime. If it's red then it's a bug</div>
+<script>
+  const start = Date.now()
+  setTimeout(() => {
+    counter.style.background = 'lime'
+  }, 2000)
+</script>
