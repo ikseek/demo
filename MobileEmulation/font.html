@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serif</title>
+  <style>
+    @font-face {
+      font-family: 'Montaga';
+      font-style: normal;
+      font-weight: 400;
+      src: url('../DomSnapshot/Montaga-Regular.ttf');
+    }
+    @font-face {
+      font-family: 'Zilla Slab';
+      font-style: normal;
+      font-weight: 400;
+      src: url('../DomSnapshot/zilla_slab.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    body {
+      margin: 0;
+      font-size: 16px;
+      font-family: sans-serif;
+    }
+    .line {
+      height: 24px;
+      line-height: 24px;
+      border-bottom: 1px dotted black;
+    }
+    body.serif {
+      font-family: serif;
+    }
+    body.montaga {
+      font-family: Montaga;
+    }
+    body.zilla-slab {
+      font-family: 'Zilla Slab';
+    }
+  </style>
+</head>
+<body>
+  <div class="line">AAAAA</div>
+  <div class="line">BBBBB</div>
+  <div class="line">CCCCC</div>
+  <div class="line">DDDDD</div>
+  <div class="line">EEEEE</div>
+  <div class="line">FFFFF</div>
+  <div class="line">GGGGG</div>
+  <div class="line">HHHHH</div>
+  <div class="line">IIIII</div>
+  <div class="line">JJJJJ</div>
+  <div class="line">KKKKK</div>
+  <div class="line">LLLLL</div>
+  <div class="line">MMMMM</div>
+  <div class="line">NNNNN</div>
+  <div class="line">OOOOO</div>
+  <div class="line">PPPPP</div>
+  <div class="line">QQQQQ</div>
+  <div class="line">RRRRR</div>
+  <div class="line">SSSSS</div>
+  <div class="line">TTTTT</div>
+  <div class="line">UUUUU</div>
+  <div class="line">VVVVV</div>
+  <div class="line">WWWWW</div>
+  <div class="line">XXXXX</div>
+  <div class="line">YYYYY</div>
+  <div class="line">ZZZZZ</div>
+  <div class="line">aaaaa</div>
+  <div class="line">bbbbb</div>
+  <div class="line">ccccc</div>
+  <div class="line">ddddd</div>
+  <div class="line">eeeee</div>
+  <div class="line">fffff</div>
+  <div class="line">ggggg</div>
+  <div class="line">hhhhh</div>
+  <div class="line">iiiii</div>
+  <div class="line">jjjjj</div>
+  <div class="line">kkkkk</div>
+  <div class="line">lllll</div>
+  <div class="line">mmmmm</div>
+  <div class="line">nnnnn</div>
+  <div class="line">ooooo</div>
+  <div class="line">ppppp</div>
+  <div class="line">qqqqq</div>
+  <div class="line">rrrrr</div>
+  <div class="line">sssss</div>
+  <div class="line">ttttt</div>
+  <div class="line">uuuuu</div>
+  <div class="line">vvvvv</div>
+  <div class="line">wwwww</div>
+  <div class="line">xxxxx</div>
+  <div class="line">yyyyy</div>
+  <div class="line">zzzzz</div>
+  <div>
+    <a href="?type=">sans serif</a>
+    <a href="?type=serif">serif</a>
+    <a href="?type=montaga">Montaga (ttf)</a>
+    <a href="?type=zilla-slab">Zilla slab (woff2)</a>
+  </div>
+  <script>
+    document.body.classList.add(new URL(location).searchParams.get('type'))
+  </script>
+</body>
+</html>
