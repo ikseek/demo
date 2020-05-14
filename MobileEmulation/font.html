@@ -18,6 +18,18 @@
       src: url('../DomSnapshot/zilla_slab.woff2') format('woff2');
       unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
     }
+    @font-face {
+      font-family: 'Noto serif';
+      font-style: normal;
+      font-weight: 400;
+      src: url('NotoSerif-Regular.ttf');
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      src: url('Roboto-Regular.ttf');
+    }
     body {
       margin: 0;
       font-size: 16px;
@@ -36,6 +48,12 @@
     }
     body.zilla-slab {
       font-family: 'Zilla Slab';
+    }
+    body.noto-serif {
+      font-family: 'Noto Serif';
+    }
+    body.roboto {
+      font-family: 'Roboto';
     }
   </style>
 </head>
@@ -97,6 +115,8 @@
     <a href="?type=serif">serif</a>
     <a href="?type=montaga">Montaga (ttf)</a>
     <a href="?type=zilla-slab">Zilla slab (woff2)</a>
+    <a href="?type=noto-serif">Noto serif</a>
+    <a href="?type=roboto">Roboto</a>
   </div>
   <script>
     document.body.classList.add(new URL(location).searchParams.get('type'))
