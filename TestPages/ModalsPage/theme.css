@@ -1,0 +1,58 @@
+body {
+  background-color: #110435;
+  color: white;
+  margin: 0 auto;
+  padding: 20px 10px;
+  max-width: 1080px;
+}
+p {
+  text-align: justify;
+}
+p:nth-of-type(7n+1) {
+  color: red;
+}
+p:nth-of-type(7n+2) {
+  color: orange;
+}
+p:nth-of-type(7n+3) {
+  color: yellow;
+}
+p:nth-of-type(7n+4) {
+  color: greenyellow;
+}
+p:nth-of-type(7n+5) {
+  color: lightskyblue;
+}
+p:nth-of-type(7n+6) {
+  color: cornflowerblue;
+}
+p:nth-of-type(7n+7) {
+  color: violet;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  padding: 30px;
+  box-sizing: border-box;
+  background-color: #00000086;
+  overflow: auto;
+}
+.modal:not(.open) {
+  display: none;
+}
+.modal-content {
+  background-color: #110435;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.modal-content--scrollable {
+  max-height: 100%;
+  overflow: auto;
+}
