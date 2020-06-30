@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <a href="?type=Inter">Inter</a>
+    <a href="?type=Open+Sans">Open sans</a>
+    <a href="?type=Merriweather">Merriweather</a>
+    <a href="?type=Piedra">Piedra</a>
+    <a href="?type=MuseoModerno">MuseoModerno</a>
+    <a href="?type=Lato">Lato</a>
+    <a href="?type=Roboto">Roboto</a>
+  </div>
+  <script>
+    const type = new URL(location).searchParams.get('type') || 'Inter'
+    const link = document.createElement('link')
+    link.rel = 'stylesheet'
+    link.href = `https://fonts.googleapis.com/css2?family=${type}:wght@100;200;300;400;500;600;700;800;900&display=swap`
+    document.head.appendChild(link)
+    const h1 = document.createElement('h1')
+    h1.textContent = type
+    document.body.appendChild(h1)
+    for (const weight of [100,200,300,400,500,600,700,800,900]) {
+      const div = document.createElement('div')
+      div.textContent = 'Almost before we knew it, we had left the ground.'
+      div.style = `font-family:"${type}";font-weight:${weight};font-size:30px;padding:20px 0; border-bottom: 1px solid silver;`
+      document.body.appendChild(div)
+    }
+  </script>
+</body>
+</html>
