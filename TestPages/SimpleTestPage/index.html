@@ -12,7 +12,15 @@
     <h1>Applitools</h1>
     <div id="overflowing-div" style="width: 950px;">
 		<script>
-			for (var i=0;i<51;++i){
+			var max = 51;
+			if (window.location.search=='?long') {
+				max=500;
+			}
+			if (window.location.search=='?large') {
+				max=800;
+				document.querySelector('#overflowing-div').style.width='3000px';
+			}
+			for (var i=0;i<max;++i){
 				window.document.writeln("<img src='minions-300x188.jpg'>");
 			}
 		</script>
