@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<HTML lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="payment.css">
+    </head>
+    <BODY>
+        <HEADER role="banner">
+            <DIV class="paynow-top-bar hide-on-small"></DIV>
+            <DIV class="main-area logo-section container row">
+                <DIV class="paynow-logo columns">
+                    <A data-metrics-parent-id="89DE61844C6A458EBC266458D81964CD" rel="external" href="https://qa-www.humana.com/" target="_blank">
+                    <IMG src="Paynow/Content/Images/humana-logo-phone.png" alt="Humana logo" class="logo-image left" />
+                    </A>
+                    <DIV class="signout-section no-print show-on-small">
+                        <DIV class="right">
+                            <SECTION class="module-link text-align-center small-glass-container">
+                                <DIV class="row">
+                                    <A aria-describedby="signout button" href="#signout-modal" id="signout-modal-trigger" class="secondary-button modal-link">
+                                    <SPAN>Sign out</SPAN>
+                                    <EM class="visuallyhidden">opens a dialog</EM>
+                                    <I aria-hidden="true" class="icon-arrow-right"></I>
+                                    </A>
+                                </DIV>
+                            </SECTION>
+                        </DIV>
+                    </DIV>
+                </DIV>
+            </DIV>
+            <DIV class="primary-navigation paynow-greenbar">
+                <DIV class="container signout-section no-print hide-on-small">
+                    <DIV class="columns four right x1-top">
+                        <SECTION class="module-link text-align-center small-glass-container">
+                            <DIV class="row">
+                                <A aria-describedby="signout button" href="#signout-modal" id="signout-modal-trigger" class="secondary-button modal-link">
+                                <SPAN>Sign out</SPAN>
+                                <EM class="visuallyhidden">opens a dialog</EM>
+                                <I aria-hidden="true" class="icon-arrow-right"></I>
+                                </A>
+                            </DIV>
+                        </SECTION>
+                    </DIV>
+                </DIV>
+            </DIV>
+        </HEADER>
+        <MAIN data-main-content="" class="small-glass-container x1-top paynow">
+            <FORM method="post" novalidate="novalidate" action="/Paynow/Payment">
+                <INPUT name="__RequestVerificationToken" type="hidden" value="dGQszy_fwXjdscmcM6MNE0TzxZ2ZZpSeIybxpv7wgD7RzWev8xZ-KRPHlV_cp154qxHf64f213F0X5w9J9yPpFY49CM1"></INPUT>
+                <INPUT name="PaymentDetailsDto.hdnPaymentMode" id="hdnSelectedvalue" type="hidden" value="1"></INPUT>
+                <DIV class="row container">
+                    <DIV class="columns twentyfour content">
+                        <DIV role="alert" aria-live="assertive" style="visibility: hidden; display: none;" id="errorContainer" class="validation-summary x2 x2-top columns twentyfour lifted-corners validation-summary-errors no-print">
+                            <DIV class="errors">
+                                <H3 id="error-summary-title">
+                                    <IMG src="Paynow/Content/framework/images/misc/error-indicator.png" alt="" aria-hidden="true"/>
+                                </H3>
+                                <H3 id="error-summary-header">
+                                    <IMG src="Paynow/Content/framework/images/misc/error-indicator.png" alt="" aria-hidden="true"/>
+                                    <SPAN style="display: none;" id="numberOfErrors"></SPAN>
+                                </H3>
+                                <UL style="display: none;" class="error"></UL>
+                            </DIV>
+                        </DIV>
+                        <H1 id="paymentHeaderText">Payment details</H1>
+                        <DIV class="accountDetails">
+                            <DIV class="md-inline-block">
+                                <SPAN>
+                                <LABEL for="PaymentModeDto_PersonName" class="paynowLabel inline">Group name: </LABEL>
+                                </SPAN>
+                                <SPAN>Wolfe Medical INC</SPAN>
+                            </DIV>
+                            <DIV class="md-inline-block">
+                                <SPAN class="paynowLabel inline">Billing ID: </SPAN>
+                                <SPAN>576080 - 001</SPAN>
+                            </DIV>
+                        </DIV>
+                        <DIV aria-hidden="true" id="paymentSteps" class="payment-steps no-print">
+                            <DIV class="step selected">
+                                <SPAN></SPAN>
+                                <H3 class="hidden-sm hidden-xs hide-on-small">1: Payment details</H3>
+                            </DIV>
+                            <DIV class="step">
+                                <SPAN></SPAN>
+                                <H3 class="hidden-sm hidden-xs hide-on-small">2: Review information</H3>
+                            </DIV>
+                            <DIV class="step">
+                                <SPAN></SPAN>
+                                <H3 class="hidden-sm hidden-xs hide-on-small">3: Payment confirmation</H3>
+                            </DIV>
+                            <SPAN id="paymentStepsText" class="sm-payment-text hidden-md hidden-lg show-on-small">1: Payment details</SPAN>
+                        </DIV>
+                        <DIV style="" id="step-0" class="row no-print">
+                            <DIV class="x2-top">
+                                <DIV role="radiogroup" class="radio-container">
+                                    <P id="paymentAmountLabel" class="x2">Payment amount</P>
+                                    <DIV style="display: block;" class="light-background secondary-background-color x3 payment-disclaimer hide columns twentyfour">
+                                        <DIV class="row">
+                                            <DIV class="twentyfour p1">
+                                                <DIV style="margin-right: 10px;" class="pr-2 left x1-top x2-right one">
+                                                    <EM class="status-icon-error icon-utility-information icon-align-left"></EM>
+                                                </DIV>
+                                                <P>No balance is due on your account at this time, but you can still enter an optional amount below in advance of your next premium due date if you'd like.
+                                                    Any amount you pay now will be added to your account as a credit.</P>
+                                            </DIV>
+                                        </DIV>
+                                    </DIV>
+                                    <LABEL aria-hidden="true" for="otherAmountInput" class="visuallyhidden">Other Amount</LABEL>
+                                    <UL role="radiogroup" class="x2">
+                                        <LI class="x2">
+                                            <LABEL>                                      
+                                            <SPAN id="paymentAmountDescription">Balance as of today<STRONG>$0.00</STRONG></SPAN>                                
+                                            </LABEL>
+                                        </LI>
+                                        <LI>
+                                            <LABEL for="otherAmount" id="otherAmountLabel" class="x1 checked">
+                                            <INPUT aria-labelledby="paymentAmountLabel" name="PaymentDetailsDto.PaymentAmount" checked="checked" id="otherAmount" type="radio" class="hide" value="1"></INPUT>
+                                            Optional amount
+                                            </LABEL>
+                                            <DIV class="md-inline-block md-small-form input-container currency">
+                                                <LABEL id="otherAmountLabel2" class="visuallyhidden form-label">
+                                                Payment Amount, Other Amount
+                                                </LABEL>
+                                                <LABEL for="otherAmountInput" id="otherAmountLabel3" class="visuallyhidden form-label">
+                                                Optional amount
+                                                </LABEL>
+                                                <INPUT inputmode="decimal" autocomplete="off" aria-invalid="false" type="text" data-val-regex="Please enter a valid payment amount." data-val="true" 
+                                                        data-val-regex-pattern="^[0-9,]*(\.[0-9]{0,2})?$" aria-labelledby="otherAmountLabel2" novalidate="true" aria-describedby="otherAmountError" 
+                                                        name="PaymentDetailsDto.OtherAmount" id="otherAmountInput" placeholder="0.00" 
+                                                        class="input-text x1 optional-amount text-box single-line valid input-validation-valid" value=""></INPUT>
+                                                <LABEL for="otherAmountInput">
+                                                <SPAN data-valmsg-for="PaymentDetailsDto.OtherAmount" data-valmsg-replace="true" aria-live="off" id="otherAmountError" class="text-danger field-validation-valid"></SPAN>
+                                                </LABEL>
+                                            </DIV>
+                                        </LI>
+                                    </UL>
+                                </DIV>
+                            </DIV>
+                            <DIV role="separator" class="columns twentyfour x2-top x2">
+                                <HR/>
+                            </DIV>
+                            <P id="allRequired" class="x1 x2-top">All fields are required</P>
+                            <DIV class="x1">
+                                <LABEL for="paymentMethod" id="payment-method-label" class="form-label">Payment method</LABEL>
+                                <DIV class="input-container">
+                                    <DIV class="selectWrapper">
+                                        <SELECT name="PaymentDetailsDto.PaymentMethod" id="paymentMethod" class="form-control">
+                                            <OPTION value="1" selected="selected">Bank account</OPTION>
+                                        </SELECT>
+                                    </DIV>
+                                </DIV>
+                            </DIV>
+                            <DIV style="display: none;" id="cardPayment" class="grouping x2-top input-container">
+                                <DIV class="x1">
+                                    <DIV class="input-container">
+                                        <LABEL for="cardType" id="card-payment-label" class="form-label">Card Type</LABEL>
+                                        <DIV class="selectWrapper">
+                                            <SELECT aria-labelledby="card-payment=label" autocomplete="cc-type" name="CardTypeDesc" disabled="" id="cardType">
+                                                <OPTION disabled="" value="-1" selected="selected">
+                                                    Please select
+                                                </OPTION>
+                                                <OPTION value="Discover">Discover</OPTION>
+                                                <OPTION value="Visa">Visa</OPTION>
+                                                <OPTION value="Master">Master</OPTION>
+                                            </SELECT>
+                                        </DIV>
+                                    </DIV>
+                                    <LABEL for="cardType" class="error-label">
+                                    <SPAN class="field-validation-valid hidden">
+                                    <SPAN >
+                                    Invalid card type.
+                                    </SPAN>
+                                    </SPAN>
+                                    </LABEL>
+                                </DIV>
+                                <DIV class="x1-top input-container">
+                                    <LABEL for="nameOnCard" class="form-label left">
+                                    Name on card
+                                    </LABEL>
+                                    <INPUT minlength="1" inputmode="text" autocomplete="billing cc-name" maxlength="30" type="text" required="true" data-val="true" data-val-required="This is a required field." 
+                                            aria-describedby="nameOnCardError" name="PaymentDetailsDto.NameOnCard" disabled="" id="nameOnCard" class="input-text x1 text-box single-line" value="" aria-label="Name on card">
+                                    </INPUT>
+                                    <LABEL for="nameOnCard" class="form-text validation-label">
+                                    <SPAN data-valmsg-for="PaymentDetailsDto.NameOnCard" data-valmsg-replace="true" aria-live="off" id="nameOnCardError" class="field-validation-valid text-danger">
+                                    </SPAN>
+                                    </LABEL>
+                                </DIV>
+                                <DIV class="x1-top input-container x1">
+                                    <LABEL for="cardNumber" class="form-label left">
+                                    Card number
+                                    </LABEL>
+                                    <INPUT data-val-maxlength="Please enter a valid card number." minlength="16" inputmode="numeric" autocomplete="billing cc-number" maxlength="16"
+                                            data-val-minlength-min="16" type="text" data-val-minlength="Please enter a valid card number." data-val-regex="Please enter a valid card number." 
+                                            required="true" data-val="true" data-val-regex-pattern="^[0-9]{16}$" data-val-maxlength-max="16" data-val-required="This is a required field." 
+                                            aria-describedby="cardNumberError" name="PaymentDetailsDto.CardNumber" disabled="" id="cardNumber" class="input-text x1 text-box single-line" value="" 
+                                            aria-label="Card Number">
+                                    </INPUT>
+                                    <LABEL for="cardNumber" class="form-text validation-label">
+                                    <SPAN data-valmsg-for="PaymentDetailsDto.CardNumber" data-valmsg-replace="true" aria-live="off" id="cardNumberError" class="field-validation-valid text-danger">
+                                    </SPAN>
+                                    </LABEL>
+                                </DIV>
+                                <DIV class="input-container x2-top row no-margin no-flex">
+                                    <LABEL for="expirationDate" class="hidden">
+                                    Expiration date
+                                    </LABEL>
+                                    <DIV id="expirationDate" class="x1 columns grouping">
+                                        <DIV class="x1 x2-right">
+                                            <LABEL for="expirationDateMonth" class="form-label">
+                                            Expiration date
+                                            </LABEL>
+                                            <DIV class="row">
+                                                <DIV class="small-glass-four small-select">
+                                                    <DIV class="input-container">
+                                                        <DIV class="selectWrapper">
+                                                            <SELECT autocomplete="billing cc-exp-month" name="PaymentDetailsDto.ExpiryMonth" disabled="" id="expirationDateMonth" class="" aria-label="Expiration Date Month">
+                                                                <OPTION disabled="disabled" value="-1" selected="selected">Month</OPTION>
+                                                                <OPTION value="1">01</OPTION>
+                                                                <OPTION value="2">02</OPTION>
+                                                                <OPTION value="3">03</OPTION>
+                                                                <OPTION value="4">04</OPTION>
+                                                                <OPTION value="5">05</OPTION>
+                                                                <OPTION value="6">06</OPTION>
+                                                                <OPTION value="7">07</OPTION>
+                                                                <OPTION value="8">08</OPTION>
+                                                                <OPTION value="9">09</OPTION>
+                                                                <OPTION value="10">10</OPTION>
+                                                                <OPTION value="11">11</OPTION>
+                                                                <OPTION value="12">12</OPTION>
+                                                            </SELECT>
+                                                        </DIV>
+                                                    </DIV>
+                                                </DIV>
+                                                <DIV class="small-glass-four small-select">
+                                                    <DIV class="input-container">
+                                                        <DIV class="selectWrapper">
+                                                            <SELECT autocomplete="billing cc-exp-year" name="PaymentDetailsDto.ExpiryYear" disabled="" id="expirationDateYear" class="" aria-label="Expiration date Year">
+                                                                <OPTION disabled="disabled" value="-1" selected="selected">Year</OPTION>
+                                                                <OPTION value="2020">2020</OPTION>
+                                                                <OPTION value="2021">2021</OPTION>
+                                                                <OPTION value="2022">2022</OPTION>
+                                                                <OPTION value="2023">2023</OPTION>
+                                                                <OPTION value="2024">2024</OPTION>
+                                                                <OPTION value="2025">2025</OPTION>
+                                                                <OPTION value="2026">2026</OPTION>
+                                                                <OPTION value="2027">2027</OPTION>
+                                                                <OPTION value="2028">2028</OPTION>
+                                                                <OPTION value="2029">2029</OPTION>
+                                                                <OPTION value="2030">2030</OPTION>
+                                                                <OPTION value="2031">2031</OPTION>
+                                                                <OPTION value="2032">2032</OPTION>
+                                                                <OPTION value="2033">2033</OPTION>
+                                                                <OPTION value="2034">2034</OPTION>
+                                                                <OPTION value="2035">2035</OPTION>
+                                                                <OPTION value="2036">2036</OPTION>
+                                                                <OPTION value="2037">2037</OPTION>
+                                                                <OPTION value="2038">2038</OPTION>
+                                                                <OPTION value="2039">2039</OPTION>
+                                                            </SELECT>
+                                                        </DIV>
+                                                    </DIV>
+                                                </DIV>
+                                            </DIV>
+                                        </DIV>
+                                        <LABEL for="expirationDateMonth" class="form-text validation-label">
+                                        <SPAN class="field-validation-valid text-danger group-error">
+                                        <SPAN >
+                                        You must select a date.
+                                        </SPAN>
+                                        </SPAN>
+                                        </LABEL>
+                                    </DIV>
+                                    <DIV class="columns four">
+                                        <DIV class="">
+                                            <LABEL for="zipCode" class="form-label left">
+                                            Billing ZIP code
+                                            </LABEL>
+                                            <INPUT data-val-maxlength="Please enter a valid 5-digit ZIP code." minlength="5" inputmode="numeric" autocomplete="billing postal-code" 
+                                                    maxlength="5" pattern="\d{5}" data-val-minlength-min="5" type="text" data-val-minlength="Please enter a valid 5-digit ZIP code." 
+                                                    data-val-regex="Please enter a valid 5-digit ZIP code." required="true" data-val="true" data-val-regex-pattern="^[0-9]{5}$" data-val-maxlength-max="5" 
+                                                    data-val-required="This is a required field." aria-describedby="zipCodeError" name="PaymentDetailsDto.ZIPCode" 
+                                                    disabled="" id="zipCode" class="input-text x1 text-box single-line" value="" aria-label="ZIP code">
+                                            </INPUT>
+                                            <LABEL for="zipCode" class="form-text validation-label">
+                                            <SPAN data-valmsg-for="PaymentDetailsDto.ZIPCode" data-valmsg-replace="true" aria-live="off" id="zipCodeError" class="field-validation-valid text-danger">
+                                            </SPAN>
+                                            </LABEL>
+                                        </DIV>
+                                    </DIV>
+                                </DIV>
+                            </DIV>
+                            <DIV id="bankPayment" class="grouping input-container">
+                                <DIV>
+                                    <DIV role="radiogroup" aria-labelledby="accountTypeLabel" class="radio-container">
+                                        <P id="accountTypeLabel" class="x1">
+                                            Account type
+                                        </P>
+                                        <UL class="x1-list">
+                                            <LI >
+                                                <LABEL >
+                                                    <SPAN class="radio">
+                                                        <INPUT role="radio" name="PaymentDetailsDto.AccountType" checked="checked" id="accountTypeChecking" type="radio" value="0" >
+                                                        </INPUT>
+                                                        <DIV class="dot"></DIV>
+                                                    </SPAN>
+                                                    Checking
+                                                </LABEL>
+                                            </LI>
+                                            <LI >
+                                                <LABEL >
+                                                    <SPAN class="radio">
+                                                        <INPUT role="radio" name="PaymentDetailsDto.AccountType" id="accountTypeSavings" type="radio" value="1" >
+                                                        </INPUT>
+                                                        <DIV class="dot"></DIV>
+                                                    </SPAN>
+                                                    Savings
+                                                </LABEL>
+                                            </LI>
+                                        </UL>
+                                    </DIV>
+                                </DIV>
+                                <DIV class="input-container x1-top">
+                                    <LABEL for="bankName" class="form-label left">
+                                    Bank name
+                                    </LABEL>
+                                    <INPUT inputmode="text" autocomplete="off" maxlength="30" type="text" required="true" data-val="true" data-val-required="This is a required field." 
+                                            aria-describedby="bankNameError" name="PaymentDetailsDto.BankName" id="bankName" class="input-text x1 text-box single-line" value="" aria-label="Bank name">
+                                    </INPUT>
+                                    <LABEL for="bankName" class="form-text validation-label">
+                                    <SPAN data-valmsg-for="PaymentDetailsDto.BankName" data-valmsg-replace="true" id="bankNameError" class="field-validation-valid text-danger">
+                                    </SPAN>
+                                    </LABEL>
+                                </DIV>
+                                <DIV class="x1-top input-container">
+                                    <LABEL for="accHoldeName" class="form-label left">
+                                    Account holder name
+                                    </LABEL>
+                                    <INPUT inputmode="text" autocomplete="off" maxlength="30" type="text" required="true" data-val="true" data-val-required="This is a required field."
+                                            aria-describedby="accHolderNameError" name="PaymentDetailsDto.AccHoldeName" id="accHoldeName" class="input-text x1 text-box single-line" value="" aria-label="Account holder name">
+                                    </INPUT>
+                                    <LABEL for="accHoldeName" class="form-text validation-label">
+                                    <SPAN data-valmsg-for="PaymentDetailsDto.AccHoldeName" data-valmsg-replace="true" aria-live="off" id="accHolderNameError" class="field-validation-valid text-danger">
+                                    </SPAN>
+                                    </LABEL>
+                                </DIV>
+                                <DIV class="x1-top input-container">
+                                    <DIV >
+                                        <LABEL for="routingNumber" class="form-label left">
+                                        Routing number
+                                        </LABEL>
+                                        <A aria-describedby="Routing Number" href="#accountCheck" id="accountCheck-modal-trigger" class="question-link tertiary-link secondary-link left x4-left modal-link">
+                                        <SPAN >
+                                        Where can I find this? 
+                                        </SPAN>
+                                        <EM class="visuallyhidden">
+                                        opens a dialog
+                                        </EM>
+                                        </A>
+                                    </DIV>
+                                    <INPUT data-val-maxlength="Please enter a valid routing number." minlength="1" inputmode="numeric" autocomplete="off" maxlength="9" data-val-minlength-min="9"
+                                            type="text" data-val-minlength="Please enter a valid routing number." required="true" data-val="true" data-val-maxlength-max="9"
+                                            data-val-required="This is a required field." aria-describedby="routingNumberError" name="PaymentDetailsDto.RoutingNumber" id="routingNumber" 
+                                            class="input-text x1 text-box single-line" value="" aria-label="Routing number">
+                                    </INPUT>
+                                    <LABEL for="routingNumber" class="form-text validation-label">
+                                    <SPAN data-valmsg-for="PaymentDetailsDto.RoutingNumber" data-valmsg-replace="true" aria-live="off" id="routingNumberError" class="field-validation-valid text-danger">
+                                    </SPAN>
+                                    </LABEL>
+                                </DIV>
+                                <DIV class="x1-top input-container">
+                                    <DIV>
+                                        <LABEL for="accountNumber" class="form-label left">
+                                        Account number
+                                        </LABEL>
+                                        <A aria-describedby="Account Number" href="#accountCheck" id="accountCheck-modal-trigger" class="question-link tertiary-link secondary-link left x4-left modal-link">
+                                        <SPAN >
+                                        Where can I find this? 
+                                        </SPAN>
+                                        <EM class="visuallyhidden">
+                                        opens a dialog
+                                        </EM>
+                                        </A>
+                                    </DIV>
+                                    <INPUT data-val-maxlength="Please enter a valid account number." minlength="1" inputmode="numeric" autocomplete="off" maxlength="17" 
+                                        data-val-minlength-min="1" type="text" data-val-minlength="Please enter a valid account number." data-val-regex="Please enter a valid account number." 
+                                        required="true" data-val="true" data-val-regex-pattern="^[0-9]{1,17}$" data-val-maxlength-max="17" data-val-required="This is a required field." 
+                                        aria-describedby="accountNumberError" name="PaymentDetailsDto.AccountNumber" id="accountNumber" class="input-text x1 text-box single-line" value=""
+                                        aria-label="Account number">
+                                    </INPUT>
+                                    <LABEL for="accountNumber" class="form-text validation-label">
+                                    <SPAN data-valmsg-for="PaymentDetailsDto.AccountNumber" data-valmsg-replace="true" aria-live="off" id="accountNumberError" class="field-validation-valid text-danger">
+                                    </SPAN>
+                                    </LABEL>
+                                </DIV>
+                            </DIV>
+                            <DIV class="errors-group input-container">
+                                <DIV class="">
+                                    <DIV for="bankPayment" id="error-bankPayment" class="form-text validation-label error server-validation-summary-error">
+                                        <SPAN aria-live="off" class="field-validation-valid group-error">
+                                        <SPAN >
+                                        The information entered is not a valid bank account. Please review your information for accuracy before resubmitting or contact your bank for assistance
+                                        </SPAN>
+                                        </SPAN>
+                                        <SPAN class="hidden visuallyhidden">
+                                        Invalid bank account
+                                        </SPAN>
+                                    </DIV>
+                                </DIV>
+                                <DIV >
+                                    <DIV for="cardPayment" style="display: none;" id="error-cardPayment" class="form-text validation-label error server-validation-summary-error">
+                                        <SPAN aria_live="off" class="field-validation-valid group-error">
+                                        <SPAN >
+                                        The information entered is not a valid credit or debit card. Please review your information for accuracy before resubmitting or contact your card provider for assistance.
+                                        </SPAN>
+                                        </SPAN>
+                                        <SPAN class="hidden visuallyhidden">
+                                        Invalid credit or debit card
+                                        </SPAN>
+                                    </DIV>
+                                </DIV>
+                            </DIV>
+                        </DIV>
+                        <DIV style="display: none;" id="step-1" class="row no-print">
+                            <SECTION aria-labelledby="review-heading" class="review-section columns sixteen row">
+                                <P id="review-heading" class="x1">
+                                    Review payment details
+                                </P>
+                                <DIV class="mockTable columns twelve">
+                                    <DIV role="listitem" aria-describedby="paymentAmountTD" class="mockTR" aria-label="paymentAmountTDLabel">
+                                        <DIV id="paymentAmountTDLabel">Payment amount</DIV>
+                                        <DIV id="paymentAmountTD"></DIV>
+                                    </DIV>
+                                    <DIV role="listitem" aria-labelledby="paymentMethodTDLabel" aria-describedby="paymentMethodTD" class="mockTR">
+                                        <DIV id="paymentMethodTDLabel">Payment method</DIV>
+                                        <DIV id="paymentMethodTD"></DIV>
+                                    </DIV>
+                                    <DIV role="listitem" aria-labelledby="paymentNumberTDLabel" aria-describedby="paymentNumberTD" class="mockTR">
+                                        <DIV id="paymentNumberTDLabel">Card Number</DIV>
+                                        <DIV id="paymentNumberTD"></DIV>
+                                    </DIV>
+                                    <DIV role="listitem" aria-labelledby="paymentDateTD" aria-describedby="paymentDateTDLabel" class="mockTR">
+                                        <DIV id="paymentDateTDLabel">Payment date</DIV>
+                                        <DIV id="paymentDateTD"></DIV>
+                                    </DIV>
+                                </DIV>
+                            </SECTION>
+                            <DIV class="columns twentyfour error-screen x1-top">
+                                <P>Payments submitted after 7 p.m. Eastern time may be credited to your account the following day. This payment may not reflect on an invoice or collection notice created tonight.</P>
+                            </DIV>
+                            <DIV role="separator" class="fill-width p2-top">
+                                <HR />
+                            </DIV>
+                            <SECTION class="columns twentyfour x3-top row">
+                                <DIV class="column seven">
+                                    <LABEL for="terms" class="inline-block">
+                                        <SPAN class="checkbox">
+                                            <INPUT id="terms" type="checkbox"></INPUT>
+                                            <DIV class="check"></DIV>
+                                        </SPAN>
+                                        I agree to the
+                                    </LABEL>
+                                    <A href="#terms-modal" id="terms-modal-trigger" class="tertiary-link terms-link modal-link">
+                                    <SPAN>terms and conditions<EM class="visuallyhidden">opens a dialog</EM></SPAN>
+                                    </A>
+                                </DIV>
+                            </SECTION>
+                        </DIV>
+                        <DIV style="display: none;" id="step-2" class="row confirmation-screen">
+                            <DIV >
+                                <SECTION class="payment-status">
+                                    <IMG src="Paynow/Content/Images/checkmark_icon.svg" width="48" alt="" height="48"/>
+                                    <DIV aria-labelledby="payment-status-header" class="successful">
+                                        <H2 id="payment-status-header">
+                                            Payment successful!
+                                        </H2>
+                                        <DIV class="x1-top">
+                                            Payments submitted after 7 p.m. Eastern time may be credited to your account the following day. This payment may not reflect on an invoice or collection notice created tonight.
+                                        </DIV>
+                                    </DIV>
+                                </SECTION>
+                                <DIV class=" x6-left x7-left-mobile">
+                                    <DIV id="currentBalance" class="x1">
+                                        <UL >
+                                            <LI class="left x1-right mobile-x1-right">
+                                                <I class="icon-utility-checkmark">
+                                                </I>
+                                            </LI>
+                                            <LI >
+                                                Amount paid: 
+                                                <SPAN class="right-mobile">
+                                                </SPAN>
+                                            </LI>
+                                        </UL>
+                                    </DIV>
+                                    <DIV id="confirmationNumber" class="x1">
+                                        <UL >
+                                            <LI class="left x1-right mobile-x1-right">
+                                                <I class="icon-utility-checkmark">
+                                                </I>
+                                            </LI>
+                                            <LI >
+                                                Confirmation number: 
+                                                <SPAN class="left-mobile">
+                                                </SPAN>
+                                            </LI>
+                                        </UL>
+                                    </DIV>
+                                    <DIV class="print-this  no-print mobile-block">
+                                        <UL >
+                                            <LI class="left print-icon">
+                                                <I class="icon-utility-print">
+                                                </I>
+                                            </LI>
+                                            <LI class="right-mobile">
+                                                <A tabindex="0" class="link-with-icon secondary-link  printBtn">
+                                                <SPAN >
+                                                Print this page for your records
+                                                </SPAN>
+                                                </A>
+                                            </LI>
+                                        </UL>
+                                    </DIV>
+                                </DIV>
+                            </DIV>
+                        </DIV>
+                        <DIV id="actionRow" class="x2-top no-print action-row x3">
+                            <BUTTON style="visibility: visible; display: inline;" type="button" class="primary-button icon-arrow-thin-back previous back-to-info" aria-label="Back">
+                            </BUTTON>
+                            <A role="button" style="visibility: hidden; display: none;" href="#back-modal" id="back-modal-trigger" class="modal-link primary-button icon-arrow-thin-back hidden" aria-label="Back">
+                            <EM class="visuallyhidden">
+                            opens a dialog
+                            </EM>
+                            </A>
+                            <BUTTON style="visibility: visible; display: inline;" id="continueBtn" type="button" class="primary-button next">
+                            Continue
+                            </BUTTON>
+                            <BUTTON formaction="PaymentDetails" style="visibility: hidden; display: none;" id="submitBtn" type="submit" class="primary-button hidden">
+                            Submit payment
+                            </BUTTON>
+                            <BUTTON id="accountDetailsBtn" type="button" class="primary-button hidden back-to-info  x6-left x7-left-mobile">
+                            Back to account details
+                            </BUTTON>
+                        </DIV>
+                    </DIV>
+                </DIV>
+            </FORM>
+            <DIV class="overlay">
+                <DIV role="dialog" id="terms-modal" class="modal">
+                    <A href="#terms-modal-trigger" class="close close-modal no-print">
+                    <SPAN class="close-text">Close</SPAN>
+                    <SPAN class="visuallyhidden">Close information dialog</SPAN>
+                    </A>
+                    <DIV id="terms-modal-content">
+                        <H2 id="terms-modal-header" class="h5">
+                            Terms and conditions
+                        </H2>
+                        <DIV id="terms-modal-terms" class="row">
+                            <P class="x1">You are agreeing to pay the total amount charged for this transaction. All authorizations are subject to the agreements governing your credit card, debit card or bank account.</P>
+                            <P class="x1">The account information you have provided will be stored securely in Humana’s system and will only be used for the purpose of processing this payment transaction.</P>
+                            <P class="x1">Humana retains the right to terminate this agreement at any time.</P>
+                        </DIV>
+                        <DIV class="action-row no-print">
+                            <BUTTON id="terms-modal-accept" type="button" class="primary-button inverted modal-continue">
+                            <SPAN>I agree</SPAN>
+                            </BUTTON>
+                            <A role="link" href="#" type="button" class="primary-link modal-continue x2-left">
+                            <SPAN >Cancel</SPAN>
+                            </A>
+                        </DIV>
+                    </DIV>
+                </DIV>
+            </DIV>
+            <DIV class="overlay">
+                <DIV role="alertdialog" id="back-modal" class="modal">
+                    <A href="#back-modal-trigger" class="close close-modal no-print">
+                    <SPAN class="close-text">
+                    Close
+                    </SPAN>
+                    <SPAN class="visuallyhidden">
+                    Close information dialog
+                    </SPAN>
+                    </A>
+                    <DIV id="back-modal-content">
+                        <H2 id="back-modal-header" class="h5"></H2>
+                        <DIV id="back-modal-text" class="row">
+                            <P class="x2">
+                                The information you have entered so far will not be saved if you go back. Are you sure you want to continue?
+                            </P>
+                        </DIV>
+                        <DIV class="action-row no-print">
+                            <BUTTON id="back-modal-accept" type="button" class="primary-button inverted modal-continue">
+                            <SPAN >
+                            Continue
+                            </SPAN>
+                            </BUTTON>
+                            <A role="link" href="#" type="button" class="primary-link modal-continue x2-left">
+                            <SPAN >
+                            Cancel
+                            </SPAN>
+                            </A>
+                        </DIV>
+                    </DIV>
+                </DIV>
+            </DIV>
+            <DIV class="overlay">
+                <DIV role="dialog" id="accountCheck" class="modal">
+                    <A href="#accountCheck-trigger" class="close close-modal">
+                    <SPAN class="close-text">
+                    Close
+                    </SPAN>
+                    </A>
+                    <DIV id="memberId-modal-content">
+                        <H2 class="h5">
+                            You can find your routing number below the memo section at the bottom of any check associated with your account. Your account number appears directly to the right of your routing number.
+                        </H2>
+                        <DIV aria-hidden="true" class="row x2">
+                            <IMG src="Paynow/Content/Images/check.png" 
+                                alt="Image of check showing the routing number as the first group of numbers on the left and the account number is the second group of numbers." 
+                                class="twelve columns">
+                            </IMG>
+                        </DIV>
+                        <BUTTON class="primary-button inverted modal-continue">
+                        <SPAN >
+                        Continue
+                        </SPAN>
+                        </BUTTON>
+                    </DIV>
+                </DIV>
+            </DIV>
+        </MAIN>
+        <FOOTER role="contentinfo" class="footer-extra-large">
+            <DIV id="accountType">
+                <ASIDE role="complementary" id="autoPayment" class="light-background primary-background-color p2 x2-top no-print">
+                    <DIV class="container x1">
+                        <H3 class="h4 x1">
+                            Save time and enroll in automatic payments!
+                        </H3>
+                        <P class="x1">
+                            Save time each month by setting up automatic payments for your premium. Sign in or create an Employer Portal account to set up a recurring payment.
+                        </P>
+                        <A data-metrics-parent-id="89DE61844C6A458EBC266458D81964CD" href="https://qa-www.humana.com/logon" class="primary-link" target="_blank">
+                        <SPAN >
+                        Sign in or register
+                        </SPAN>
+                        </A>
+                    </DIV>
+                </ASIDE>
+            </DIV>
+            <DIV class="primary-navigation paynow-greenbar hide-on-small no-print">
+                <DIV class="container">
+                    <DIV class="row">
+                        <IMG src="Paynow/Content/Images/Humana_Logo_White.png" alt="Humana logo" class="logo-image footer-top">
+                        </IMG>
+                    </DIV>
+                </DIV>
+            </DIV>
+            <DIV class="module-footer-v2 p3-bottom p1">
+                <DIV class="container">
+                    <DIV class="row">
+                        <DIV class="footer-utility-links">
+                            <DIV class="four columns x2 x2-top">
+                                © Humana 2020
+                            </DIV>
+                            <UL class="twenty columns no-print x2 x2-top">
+                                <LI >
+                                    <A data-metrics-parent-id="89DE61844C6A458EBC266458D81964CD" rel="external" href="https://qa-www.humana.com/about/legal/" class="primary-link" target="_blank">
+                                    <SPAN >
+                                    Legal
+                                    <EM class="visuallyhidden">
+                                    (opens in new window)
+                                    </EM>
+                                    <I aria-hidden="true" class="icon-utility-new-window">
+                                    </I>
+                                    </SPAN>
+                                    </A>
+                                </LI>
+                                <LI >
+                                    <A data-metrics-parent-id="89DE61844C6A458EBC266458D81964CD" rel="external" href="https://qa-www.humana.com/about/legal/privacy/" class="primary-link" target="_blank">
+                                    <SPAN >
+                                    Privacy Practices
+                                    <EM class="visuallyhidden">
+                                    (opens in new window)
+                                    </EM>
+                                    <I aria-hidden="true" class="icon-utility-new-window">
+                                    </I>
+                                    </SPAN>
+                                    </A>
+                                </LI>
+                                <LI >
+                                    <A data-metrics-parent-id="89DE61844C6A458EBC266458D81964CD" rel="external" href="https://qa-www.humana.com/about/legal/internet-privacy/" class="primary-link" target="_blank">
+                                        <SPAN>Internet Privacy Statement
+                                            <EM class="visuallyhidden">(opens in new window)</EM>
+                                            <I aria-hidden="true" class="icon-utility-new-window"></I>
+                                        </SPAN>
+                                    </A>
+                                </LI>
+                                <LI >
+                                    <A data-metrics-parent-id="89DE61844C6A458EBC266458D81964CD" rel="external" href="https://qa-www.humana.com/about/legal/disclaimer-and-licensure/" class="primary-link" target="_blank">
+                                        <SPAN>Disclaimers & Licensure
+                                            <EM class="visuallyhidden">(opens in new window)</EM>
+                                            <I aria-hidden="true" class="icon-utility-new-window"></I>
+                                        </SPAN>
+                                    </A>
+                                </LI>
+                                <LI class="p0-left">
+                                    <A data-metrics-parent-id="89DE61844C6A458EBC266458D81964CD" rel="external" href="https://qa-www.humana.com/accessibility-resources" class="primary-link" target="_blank">
+                                        <SPAN>Accessibility resources
+                                            <EM class="visuallyhidden">(opens in new window)</EM>
+                                            <I aria-hidden="true" class="icon-utility-new-window"></I>
+                                        </SPAN>
+                                    </A>
+                                </LI>
+                            </UL>
+                        </DIV>
+                    </DIV>
+                    <DIV >
+                        <HR >
+                        </HR>
+                    </DIV>
+                    <DIV class="row humana-light">
+                        <P >
+                            <STRONG >
+                            For Medicare members:
+                            </STRONG>
+                            Humana is a Medicare Advantage HMO, PPO and PFFS organization and a stand-alone prescription drug plan with a Medicare contract. 
+                            Enrollment in any Humana plan depends on contract renewal. You must continue to pay your Medicare Part B premium.
+                        </P>
+                        <P >
+                            GNHK75BEN 07/20/18
+                        </P>
+                    </DIV>
+                </DIV>
+            </DIV>
+        </FOOTER>
+     </BODY>
+</HTML>

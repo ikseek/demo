@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Checkmark icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="07_Confirmation_LG" transform="translate(-150.000000, -367.000000)">
+            <g id="Payment-summary" transform="translate(150.000000, 367.000000)">
+                <g id="Checkmark-icon">
+                    <circle id="Oval" fill="#4E8416" cx="24" cy="24" r="24"></circle>
+                    <path d="M34.4797776,15.4538528 C33.7860816,14.8334725 32.6352895,14.8347009 31.917438,15.5466027 L20.4027035,26.9659004 L16.5960467,23.1901798 C16.1643448,22.7626701 14.2560614,21.7430351 12.74975,23.2362476 C11.2440581,24.72946 12.3998052,26.4960084 12.8315071,26.9241322 L19.6433542,33.6789069 C20.0744367,34.1064166 20.7792814,34.107645 21.2109833,33.6789069 L37,17.9538012 L34.4797776,15.4538528 Z" id="hum_ii_checkmark_rgb_dgn" fill="#F7F7F7"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
