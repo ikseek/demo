@@ -41,10 +41,10 @@
     var root = document.querySelector('#root')
     var text = document.querySelector('#text')
     function handleResize() {
-      if (window.matchMedia("(max-width: 501px)").matches) {
+      if (window.matchMedia("(max-width: 499px)").matches) {
         text.innerText = 'SMALL'
         root.className = 'small'
-      } else if (window.matchMedia("(max-width: 1001px)").matches) {
+      } else if (window.matchMedia("(max-width: 999px)").matches) {
         text.innerText = 'MEDIUM'
         root.className = 'medium'
       } else {
