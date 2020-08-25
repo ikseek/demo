@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JS Layout</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    #root {
+      position: relative;
+      height: 100%;
+      padding: 10px;
+    }
+    #text {
+      position: absolute;
+      text-align: center;
+      font-family: Helvetica;
+      font-weight: bold;
+      font-size: 30px;
+    }
+    .small {
+      background-color: coral;
+    }
+    .medium {
+      background-color: greenyellow;
+    }
+    .large {
+      background-color: cornflowerblue;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div id="text">DEFAULT</div>
+  </div>
+  <script>
+    var root = document.querySelector('#root')
+    var text = document.querySelector('#text')
+    function handleResize() {
+      if (window.matchMedia("(max-width: 500px)").matches) {
+        text.innerText = 'SMALL'
+        root.className = 'small'
+      } else if (window.matchMedia("(max-width: 1000px)").matches) {
+        text.innerText = 'MEDIUM'
+        root.className = 'medium'
+      } else {
+        text.innerText = 'LARGE'
+        root.className = 'large'
+      }
+      var rootRect = root.getBoundingClientRect()
+      var textRect = text.getBoundingClientRect()
+      text.style.left = (rootRect.width / 2) - (textRect.width / 2)
+      text.style.top = (rootRect.height / 2) - (textRect.height / 2)
+    }
+    window.addEventListener('load', handleResize)
+    window.addEventListener('resize', handleResize)
+  </script>
+</body>
+</html>
