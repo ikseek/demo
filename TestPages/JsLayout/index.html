@@ -23,20 +23,36 @@
       font-weight: bold;
       font-size: 30px;
     }
+    #indicator {
+      width: 30px;
+      height: 30px;
+      background: cornflowerblue;
+    }
+    @media (max-width: 999px) {
+      #indicator {
+        background: greenyellow
+      }
+    }
+    @media (max-width: 499px) {
+      #indicator {
+        background: coral
+      }
+    }
   </style>
 </head>
 <body>
   <div id="root">
+    <div id="indicator"></div>
     <div id="text">DEFAULT</div>
   </div>
   <script>
     var root = document.querySelector('#root')
     var text = document.querySelector('#text')
     function handleResize() {
-      if (window.matchMedia("(max-width: 499px)").matches) {
+      if (window.matchMedia('(max-width: 499px)').matches) {
         text.innerText = 'SMALL'
         root.style.background = 'coral'
-      } else if (window.matchMedia("(max-width: 999px)").matches) {
+      } else if (window.matchMedia('(max-width: 999px)').matches) {
         text.innerText = 'MEDIUM'
         root.style.background = 'greenyellow'
       } else {
