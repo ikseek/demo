@@ -32,6 +32,11 @@ html, body {
   background-color: paleturquoise;
 }
 
+#input:hover {
+  border-color: hotpink;
+  background-color: pink;
+}
+
 #input:focus {
   border-color: forestgreen;
   background-color: palegreen;
